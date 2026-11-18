@@ -139,20 +139,26 @@ import { SITE_TITLE } from '../consts';
 </html>
 
 <style>
+  /* PAGE LAYOUT */
+
   .contact-page {
-    width: min(90%, 1120px);
+    width: min(90%, 1050px);
     margin: 0 auto;
-    padding: 55px 0 65px;
+    padding: 26px 0 40px;
     color: #252521;
+  }
+
+  .contact-page * {
+    box-sizing: border-box;
   }
 
   /* EDITORIAL LABELS */
 
-  .eyebrow {
+  .contact-page .eyebrow {
     font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
     color: #8d533d;
     margin: 0;
   }
@@ -160,17 +166,17 @@ import { SITE_TITLE } from '../consts';
   /* INTRODUCTION */
 
   .contact-intro {
-    max-width: 900px;
-    padding: 15px 0 75px;
+    max-width: 750px;
+    padding: 0 0 26px;
   }
 
   .contact-intro h1 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(44px, 5.5vw, 72px);
+    font-size: clamp(32px, 3.2vw, 40px);
     font-weight: 400;
     line-height: 1.15;
-    letter-spacing: -1px;
-    margin: 20px 0 25px;
+    letter-spacing: -0.7px;
+    margin: 12px 0 14px;
   }
 
   .contact-intro h1 span {
@@ -178,9 +184,9 @@ import { SITE_TITLE } from '../consts';
   }
 
   .intro-text {
-    max-width: 680px;
-    font-size: 22px;
-    line-height: 1.6;
+    max-width: 560px;
+    font-size: 16px;
+    line-height: 1.55;
     color: #625f58;
     margin: 0;
   }
@@ -190,15 +196,15 @@ import { SITE_TITLE } from '../consts';
   .section-label {
     display: flex;
     align-items: center;
-    gap: 18px;
-    margin-bottom: 30px;
+    gap: 16px;
+    margin-bottom: 16px;
   }
 
   .section-label span {
     font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.2px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
     color: #8d533d;
     white-space: nowrap;
   }
@@ -212,19 +218,19 @@ import { SITE_TITLE } from '../consts';
   /* CONTACT CARDS */
 
   .contact-section {
-    margin-bottom: 85px;
+    margin-bottom: 28px;
   }
 
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    gap: 14px;
   }
 
   .contact-card {
     min-width: 0;
-    min-height: 300px;
-    padding: 32px;
+    min-height: 185px;
+    padding: 20px;
     border: 1px solid #d8d2c7;
     text-decoration: none;
     color: #252521;
@@ -232,7 +238,7 @@ import { SITE_TITLE } from '../consts';
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 35px;
+    gap: 18px;
 
     transition:
       background 0.2s ease,
@@ -243,7 +249,7 @@ import { SITE_TITLE } from '../consts';
   .contact-card:hover {
     background: #eee7dd;
     border-color: #8d533d;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
 
   .contact-card:focus-visible {
@@ -255,83 +261,83 @@ import { SITE_TITLE } from '../consts';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 
     font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
     color: #8d533d;
   }
 
   .arrow {
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 400;
   }
 
   .card-content h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(32px, 3.5vw, 44px);
+    font-size: 25px;
     font-weight: 400;
     line-height: 1.2;
-    margin: 0 0 15px;
+    margin: 0 0 8px;
   }
 
   .card-content p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
-    line-height: 1.65;
+    font-size: 14px;
+    line-height: 1.5;
     color: #625f58;
-    margin: 0 0 22px;
+    margin: 0 0 12px;
   }
 
   .contact-detail {
     display: block;
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 13px;
     font-weight: 600;
     color: #8d533d;
     overflow-wrap: anywhere;
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 4px;
   }
 
   /* CLOSING */
 
   .contact-ending {
     text-align: center;
-    padding: 70px 20px 35px;
+    padding: 28px 20px 24px;
     border-top: 1px solid #d8d2c7;
   }
 
   .contact-ending h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(42px, 5vw, 62px);
+    font-size: 30px;
     font-weight: 400;
     line-height: 1.15;
-    margin: 22px 0;
+    margin: 12px 0;
   }
 
   .contact-ending > p:not(.eyebrow) {
-    max-width: 600px;
-    margin: 0 auto 28px;
-    font-size: 19px;
-    line-height: 1.65;
+    max-width: 500px;
+    margin: 0 auto 15px;
+    font-size: 15px;
+    line-height: 1.55;
     color: #625f58;
   }
 
   .home-link {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 
     font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     color: #8d533d;
     text-decoration: none;
 
-    padding-bottom: 6px;
+    padding-bottom: 3px;
     border-bottom: 1px solid #8d533d;
   }
 
@@ -344,19 +350,15 @@ import { SITE_TITLE } from '../consts';
   @media (max-width: 800px) {
     .contact-page {
       width: min(90%, 620px);
-      padding-top: 35px;
+      padding-top: 22px;
     }
 
     .contact-intro {
-      padding-bottom: 55px;
+      padding-bottom: 22px;
     }
 
     .contact-intro h1 {
-      font-size: clamp(40px, 8vw, 60px);
-    }
-
-    .intro-text {
-      font-size: 20px;
+      font-size: 34px;
     }
 
     .contact-grid {
@@ -364,32 +366,16 @@ import { SITE_TITLE } from '../consts';
     }
 
     .contact-card {
-      min-height: 260px;
-      padding: 27px;
-    }
-
-    .card-content h2 {
-      font-size: 36px;
-    }
-
-    .card-content p {
-      font-size: 17px;
+      min-height: 165px;
+      padding: 18px;
     }
 
     .contact-section {
-      margin-bottom: 65px;
+      margin-bottom: 24px;
     }
 
     .contact-ending {
-      padding: 55px 0 25px;
-    }
-
-    .contact-ending > p:not(.eyebrow) {
-      font-size: 17px;
-    }
-
-    .section-label span {
-      font-size: 11px;
+      padding: 24px 0;
     }
   }
 

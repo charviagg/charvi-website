@@ -24,6 +24,7 @@ import Footer from '../components/Footer.astro';
     <main class="about-page">
 
       <!-- INTRODUCTION -->
+
       <section class="intro-section">
         <p class="eyebrow">THE PERSON BEHIND THE IDEAS / 01</p>
 
@@ -52,6 +53,7 @@ import Footer from '../components/Footer.astro';
       </section>
 
       <!-- EDUCATION -->
+
       <section class="section-grid">
         <div>
           <p class="eyebrow">02 / THE FOUNDATION</p>
@@ -62,7 +64,7 @@ import Footer from '../components/Footer.astro';
           <p>
             I graduated from Nanyang Technological University
             in Singapore with a Bachelor of Business,
-            Honours (Merit), specializing in Banking & Finance.
+            Honours (Merit), specializing in Banking &amp; Finance.
           </p>
 
           <p>
@@ -76,12 +78,13 @@ import Footer from '../components/Footer.astro';
             <span>EDUCATION</span>
             <strong>Nanyang Technological University, Singapore</strong>
             <p>Bachelor of Business, Honours (Merit)</p>
-            <p>Specialisation in Banking & Finance</p>
+            <p>Specialisation in Banking &amp; Finance</p>
           </div>
         </div>
       </section>
 
       <!-- EXPERIENCE -->
+
       <section class="experience-section">
         <p class="eyebrow">03 / EXPERIENCES THAT SHAPED ME</p>
 
@@ -133,7 +136,7 @@ import Footer from '../components/Footer.astro';
           <article class="experience-item">
             <div class="experience-meta">
               <span>03</span>
-              <span>CONSULTING & LEADERSHIP</span>
+              <span>CONSULTING &amp; LEADERSHIP</span>
             </div>
             <div>
               <h3>NTU PEAK × Nxera</h3>
@@ -167,7 +170,7 @@ import Footer from '../components/Footer.astro';
           <article class="experience-item">
             <div class="experience-meta">
               <span>05</span>
-              <span>STARTUPS & COMMUNITY</span>
+              <span>STARTUPS &amp; COMMUNITY</span>
             </div>
             <div>
               <h3>Learning through smaller teams</h3>
@@ -187,6 +190,7 @@ import Footer from '../components/Footer.astro';
       </section>
 
       <!-- CURRENT EXPLORATION -->
+
       <section class="exploration-section">
         <div>
           <p class="eyebrow">04 / A QUESTION I'M EXPLORING</p>
@@ -222,6 +226,7 @@ import Footer from '../components/Footer.astro';
       </section>
 
       <!-- BEYOND WORK -->
+
       <section class="personal-section">
         <p class="eyebrow">05 / BEYOND THE WORK</p>
         <h2>A curious mind, in more ways than one.</h2>
@@ -262,6 +267,7 @@ import Footer from '../components/Footer.astro';
       </section>
 
       <!-- CLOSING -->
+
       <section class="closing">
         <p class="eyebrow">06 / THE JOURNEY CONTINUES</p>
         <h2>Always curious.<br /><em>Always becoming.</em></h2>
@@ -280,18 +286,11 @@ import Footer from '../components/Footer.astro';
 </html>
 
 <style>
-  :global(body) {
-    margin: 0;
-    background: #f7f4ed;
-    color: #252521;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-  }
+  /* PAGE LAYOUT */
 
   :global(body) main.about-page {
-    width: min(92%, 1400px);
-    max-width: 1400px;
+    width: min(90%, 1050px);
+    max-width: 1050px;
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -301,74 +300,86 @@ import Footer from '../components/Footer.astro';
     box-sizing: border-box;
   }
 
-  .eyebrow {
-    font-size: 12px;
+  /* TYPOGRAPHY */
+
+  .about-page .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1.2px;
     color: #8d533d;
-    margin: 0 0 24px;
+    margin: 0 0 10px;
   }
 
-  h1, h2, h3 {
+  .about-page h1,
+  .about-page h2,
+  .about-page h3 {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 400;
     line-height: 1.15;
     color: #252521;
   }
 
-  h1 {
-    font-size: clamp(58px, 7vw, 105px);
-    letter-spacing: -2px;
-    margin: 0 0 45px;
+  .about-page h1 {
+    font-size: clamp(32px, 3.2vw, 40px);
+    letter-spacing: -0.7px;
+    margin: 0 0 20px;
   }
 
-  h1 em, h2 em {
+  .about-page h1 em,
+  .about-page h2 em {
     font-weight: 400;
   }
 
-  h2 {
-    font-size: clamp(36px, 4vw, 58px);
+  .about-page h2 {
+    font-size: clamp(25px, 2.5vw, 30px);
     margin: 0;
   }
 
-  h3 {
-    font-size: clamp(27px, 2.5vw, 36px);
-    margin: 0 0 10px;
+  .about-page h3 {
+    font-size: 22px;
+    margin: 0 0 5px;
   }
 
-  p {
-    margin-top: 0;
-  }
+  /* INTRODUCTION */
 
   .intro-section {
-    padding: 75px 0 85px;
+    padding: 26px 0 28px;
   }
 
   .intro-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8%;
+    gap: 45px;
   }
 
   .intro-lead {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(25px, 2.6vw, 38px);
+    font-size: 20px;
     line-height: 1.45;
     color: #35312b;
+    margin: 0;
   }
 
   .intro-copy p,
   .section-copy p {
-    font-size: 19px;
-    line-height: 1.75;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
     color: #625f58;
-    margin-bottom: 20px;
+    margin: 0 0 12px;
   }
+
+  .intro-copy p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* SHARED SECTIONS */
 
   .section-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8%;
+    gap: 45px;
   }
 
   .section-grid,
@@ -377,135 +388,163 @@ import Footer from '../components/Footer.astro';
   .personal-section,
   .closing {
     border-top: 1px solid #d8d2c7;
-    padding: 65px 0 75px;
+    padding: 24px 0 28px;
   }
 
+  /* EDUCATION DETAIL */
+
   .detail {
-    margin-top: 35px;
-    padding: 25px;
+    margin-top: 14px;
+    padding: 16px 18px;
     background: #ebe6dc;
   }
 
   .detail span,
   .role,
   .personal-number {
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 10px;
+    letter-spacing: 0.8px;
     color: #8d533d;
     font-weight: 600;
   }
 
   .detail strong {
     display: block;
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 6px 0;
+    font-size: 15px;
+    font-weight: 600;
   }
 
   .detail p {
-    font-size: 16px;
-    margin: 4px 0;
+    font-size: 13px;
+    margin: 3px 0;
+    color: #625f58;
   }
+
+  /* EXPERIENCE */
 
   .section-heading {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8%;
-    margin-bottom: 40px;
+    gap: 45px;
+    margin-bottom: 18px;
   }
 
   .section-heading p {
-    font-size: 18px;
+    font-size: 15px;
     color: #625f58;
-    line-height: 1.7;
+    line-height: 1.55;
+    margin: 0;
   }
 
   .experience-item {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 7%;
-    padding: 32px 0;
+    gap: 30px;
+    padding: 15px 0;
     border-top: 1px solid #d8d2c7;
   }
 
   .experience-meta {
     display: flex;
-    gap: 20px;
-    font-size: 12px;
-    letter-spacing: 1px;
+    gap: 14px;
+    font-size: 10px;
+    letter-spacing: 0.8px;
     font-weight: 600;
     color: #8d533d;
+    padding-top: 4px;
+  }
+
+  .experience-item .role {
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0 0 6px;
   }
 
   .experience-item p:not(.role) {
-    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
     color: #625f58;
-    line-height: 1.7;
-    max-width: 750px;
-    margin: 14px 0 0;
+    line-height: 1.55;
+    margin: 0;
   }
+
+  /* CURRENT EXPLORATION */
 
   .exploration-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8%;
+    gap: 45px;
   }
 
-  .reflection {
+  .section-copy .reflection {
     font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
-    font-size: 25px !important;
-    color: #8d533d !important;
-    padding-top: 15px;
+    font-size: 18px;
+    line-height: 1.45;
+    color: #8d533d;
+    margin-top: 16px;
   }
 
+  /* PERSONAL INTERESTS */
+
   .personal-section h2 {
-    max-width: 750px;
-    margin-bottom: 35px;
+    margin-bottom: 18px;
   }
 
   .personal-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
   }
 
   .personal-grid article {
     background: #ebe6dc;
-    padding: 30px;
+    padding: 18px;
   }
 
   .personal-grid h3 {
-    margin: 25px 0 15px;
+    font-size: 21px;
+    margin: 12px 0 8px;
   }
 
   .personal-grid p {
-    font-size: 17px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.5;
     color: #625f58;
+    margin: 0;
   }
+
+  /* CLOSING */
 
   .closing {
     text-align: center;
-    padding: 85px 0 100px;
+    padding: 30px 0 38px;
+  }
+
+  .closing h2 {
+    font-size: 30px;
   }
 
   .closing p:not(.eyebrow) {
-    max-width: 650px;
-    margin: 25px auto;
-    font-size: 19px;
-    line-height: 1.7;
+    max-width: 530px;
+    margin: 12px auto;
+    font-size: 15px;
+    line-height: 1.55;
     color: #625f58;
   }
 
   .text-link {
     display: inline-block;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     color: #8d533d;
     text-decoration: none;
     border-bottom: 1px solid #8d533d;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
   }
+
+  /* TABLET */
 
   @media (max-width: 850px) {
     .intro-grid,
@@ -513,12 +552,12 @@ import Footer from '../components/Footer.astro';
     .section-heading,
     .exploration-section {
       grid-template-columns: 1fr;
-      gap: 25px;
+      gap: 16px;
     }
 
     .experience-item {
       grid-template-columns: 1fr;
-      gap: 15px;
+      gap: 8px;
     }
 
     .personal-grid {
@@ -526,33 +565,38 @@ import Footer from '../components/Footer.astro';
     }
   }
 
-  @media (max-width: 600px) {
+  /* MOBILE */
+
+  @media (max-width: 650px) {
     :global(body) main.about-page {
       width: calc(100% - 36px);
     }
 
     .intro-section {
-      padding: 50px 0;
+      padding: 22px 0;
     }
 
-    h1 {
-      font-size: 55px;
+    .about-page h1 {
+      font-size: 34px;
+    }
+
+    .about-page h2 {
+      font-size: 26px;
     }
 
     .section-grid,
     .experience-section,
     .exploration-section,
     .personal-section {
-      padding: 45px 0;
+      padding: 22px 0;
+    }
+
+    .personal-grid {
+      gap: 10px;
     }
 
     .closing {
-      padding: 60px 0;
-    }
-
-    .intro-copy p,
-    .section-copy p {
-      font-size: 18px;
+      padding: 25px 0 30px;
     }
   }
 </style>

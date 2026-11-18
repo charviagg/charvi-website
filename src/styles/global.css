@@ -1,12 +1,13 @@
 
 /*
  * CHARVI AGGARWAL
- * Global Website Styles
- * Warm Minimalist / Editorial Design
+ * GLOBAL WEBSITE STYLES
  *
- * Balanced typography for a polished,
- * comfortable reading experience.
+ * Compact editorial design
+ * Warm ivory / brown palette
  */
+
+/* DESIGN VARIABLES */
 
 :root {
   --accent: #8d533d;
@@ -25,11 +26,10 @@
   --text-secondary: #625f58;
   --border-color: #d8d2c7;
 
-  /* Balanced font sizes */
-  --body-size: 19px;
-  --intro-size: 23px;
-  --label-size: 13px;
-  --nav-size: 16px;
+  --body-size: 16px;
+  --intro-size: 18px;
+  --label-size: 11px;
+  --nav-size: 14px;
 }
 
 /* BASE */
@@ -49,7 +49,7 @@ body {
 
   font-family: 'DM Sans', Arial, sans-serif;
   font-size: var(--body-size);
-  line-height: 1.65;
+  line-height: 1.5;
 
   color: var(--text-primary);
   background: var(--background);
@@ -67,7 +67,7 @@ main {
   padding: 0;
 }
 
-/* HEADINGS */
+/* TYPOGRAPHY */
 
 h1,
 h2,
@@ -77,40 +77,38 @@ h5,
 h6 {
   font-family: 'Playfair Display', Georgia, serif;
   color: var(--text-primary);
-  line-height: 1.2;
   font-weight: 400;
+  line-height: 1.15;
 }
 
 h1 {
-  font-size: clamp(46px, 5vw, 76px);
+  font-size: clamp(34px, 3.5vw, 44px);
 }
 
 h2 {
-  font-size: clamp(32px, 3.5vw, 50px);
+  font-size: clamp(25px, 2.5vw, 32px);
 }
 
 h3 {
-  font-size: clamp(25px, 2.5vw, 34px);
+  font-size: clamp(21px, 2vw, 26px);
 }
 
 h4 {
-  font-size: 24px;
-}
-
-h5 {
   font-size: 21px;
 }
 
-h6 {
+h5 {
   font-size: 18px;
 }
 
-/* BODY TEXT */
+h6 {
+  font-size: 16px;
+}
 
 p {
   font-size: var(--body-size);
-  line-height: 1.65;
-  margin: 0 0 1.2em;
+  line-height: 1.55;
+  margin: 0 0 1em;
 }
 
 strong,
@@ -118,38 +116,25 @@ b {
   font-weight: 700;
 }
 
-/*
- * TYPOGRAPHY
- *
- * Let individual pages control their own
- * special typography and layouts.
- *
- * Avoid !important so that page-specific
- * styles work as intended.
- */
+/* INTRODUCTIONS */
 
-body main .intro,
-body main .intro-lead {
+.intro,
+.intro-lead {
   font-size: var(--intro-size);
   line-height: 1.55;
 }
 
-body main p.reflection {
-  font-size: 23px;
-  line-height: 1.6;
-}
+/* EDITORIAL LABELS */
 
-/* SMALL EDITORIAL LABELS */
-
-body main .eyebrow,
-body main .project-top,
-body main .project-category,
-body main .experience-meta,
-body main .personal-number,
-body main .section-note,
-body main .role {
+.eyebrow,
+.project-top,
+.project-category,
+.experience-meta,
+.personal-number,
+.section-note,
+.role {
   font-size: var(--label-size);
-  line-height: 1.5;
+  line-height: 1.4;
   letter-spacing: 1px;
 }
 
@@ -168,7 +153,7 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
-/* HEADER AND NAVIGATION */
+/* NAVIGATION */
 
 header nav a {
   font-size: var(--nav-size);
@@ -180,10 +165,10 @@ header.site-header .nav-links a {
 }
 
 header.site-header .site-name {
-  font-size: 30px;
+  font-size: 23px;
 }
 
-/* BLOG CONTENT */
+/* BLOG ARTICLES */
 
 .prose {
   overflow-wrap: break-word;
@@ -191,17 +176,17 @@ header.site-header .site-name {
 
 .prose p,
 .prose li {
-  font-size: var(--body-size);
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.65;
 }
 
 .prose p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.1em;
 }
 
 .prose ul,
 .prose ol {
-  padding-left: 1.5em;
+  padding-left: 1.4em;
 }
 
 /* FORMS */
@@ -209,7 +194,7 @@ header.site-header .site-name {
 textarea,
 input {
   font-family: inherit;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 textarea {
@@ -241,7 +226,7 @@ code {
 }
 
 pre {
-  padding: 1.5em;
+  padding: 1.2em;
   border-radius: 8px;
   overflow-x: auto;
 }
@@ -254,12 +239,12 @@ pre > code {
 
 blockquote {
   border-left: 3px solid var(--accent);
-  padding-left: 24px;
-  margin: 30px 0;
+  padding-left: 20px;
+  margin: 22px 0;
 
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 24px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.5;
 
   color: var(--accent-dark);
 }
@@ -274,44 +259,46 @@ hr {
 /* FOOTER */
 
 footer {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* MOBILE */
 
 @media (max-width: 720px) {
   :root {
-    --body-size: 17px;
-    --intro-size: 20px;
-    --label-size: 12px;
-    --nav-size: 14px;
+    --body-size: 15px;
+    --intro-size: 17px;
+    --label-size: 10px;
+    --nav-size: 13px;
   }
 
   body {
     font-size: var(--body-size);
-    line-height: 1.65;
   }
 
-  body main .intro,
-  body main .intro-lead {
-    font-size: var(--intro-size);
+  h1 {
+    font-size: 34px;
   }
 
-  body main p.reflection {
-    font-size: 20px;
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
   }
 
   .prose p,
   .prose li {
-    font-size: var(--body-size);
+    font-size: 15px;
   }
 
   header.site-header .site-name {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   footer {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
