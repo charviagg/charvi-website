@@ -25,6 +25,8 @@ import { SITE_TITLE } from '../consts';
 
     <main class="contact-page">
 
+      <!-- INTRODUCTION -->
+
       <section class="contact-intro">
         <p class="eyebrow">LET'S CONNECT</p>
 
@@ -41,6 +43,8 @@ import { SITE_TITLE } from '../consts';
         </p>
       </section>
 
+      <!-- CONTACT CARDS -->
+
       <section class="contact-section">
 
         <div class="section-label">
@@ -49,6 +53,8 @@ import { SITE_TITLE } from '../consts';
         </div>
 
         <div class="contact-grid">
+
+          <!-- EMAIL -->
 
           <a
             class="contact-card"
@@ -72,6 +78,8 @@ import { SITE_TITLE } from '../consts';
               </span>
             </div>
           </a>
+
+          <!-- LINKEDIN -->
 
           <a
             class="contact-card"
@@ -102,7 +110,10 @@ import { SITE_TITLE } from '../consts';
         </div>
       </section>
 
+      <!-- CLOSING -->
+
       <section class="contact-ending">
+
         <p class="eyebrow">UNTIL THEN</p>
 
         <h2>
@@ -118,6 +129,7 @@ import { SITE_TITLE } from '../consts';
         <a href="/" class="home-link">
           Back to home <span>↗</span>
         </a>
+
       </section>
 
     </main>
@@ -128,17 +140,19 @@ import { SITE_TITLE } from '../consts';
 
 <style>
   .contact-page {
-    width: min(92%, 1400px);
+    width: min(90%, 1120px);
     margin: 0 auto;
-    padding: 90px 0 100px;
+    padding: 55px 0 65px;
     color: #252521;
   }
 
+  /* EDITORIAL LABELS */
+
   .eyebrow {
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: #8d533d;
     margin: 0;
   }
@@ -146,17 +160,17 @@ import { SITE_TITLE } from '../consts';
   /* INTRODUCTION */
 
   .contact-intro {
-    max-width: 1150px;
-    padding: 30px 0 120px;
+    max-width: 900px;
+    padding: 15px 0 75px;
   }
 
   .contact-intro h1 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(58px, 7vw, 105px);
+    font-size: clamp(44px, 5.5vw, 72px);
     font-weight: 400;
-    line-height: 1.12;
-    letter-spacing: -2px;
-    margin: 30px 0 40px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin: 20px 0 25px;
   }
 
   .contact-intro h1 span {
@@ -164,10 +178,11 @@ import { SITE_TITLE } from '../consts';
   }
 
   .intro-text {
-    max-width: 850px;
-    font-size: 30px;
+    max-width: 680px;
+    font-size: 22px;
     line-height: 1.6;
     color: #625f58;
+    margin: 0;
   }
 
   /* SECTION LABEL */
@@ -175,15 +190,15 @@ import { SITE_TITLE } from '../consts';
   .section-label {
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-bottom: 45px;
+    gap: 18px;
+    margin-bottom: 30px;
   }
 
   .section-label span {
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     color: #8d533d;
     white-space: nowrap;
   }
@@ -197,112 +212,126 @@ import { SITE_TITLE } from '../consts';
   /* CONTACT CARDS */
 
   .contact-section {
-    margin-bottom: 130px;
+    margin-bottom: 85px;
   }
 
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
+    gap: 22px;
   }
 
   .contact-card {
     min-width: 0;
-    min-height: 450px;
-    padding: 45px;
+    min-height: 300px;
+    padding: 32px;
     border: 1px solid #d8d2c7;
     text-decoration: none;
     color: #252521;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 35px;
+
     transition:
       background 0.2s ease,
-      border-color 0.2s ease;
+      border-color 0.2s ease,
+      transform 0.2s ease;
   }
 
   .contact-card:hover {
     background: #eee7dd;
     border-color: #8d533d;
+    transform: translateY(-3px);
+  }
+
+  .contact-card:focus-visible {
+    outline: 2px solid #8d533d;
+    outline-offset: 4px;
   }
 
   .card-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 1.5px;
     color: #8d533d;
   }
 
   .arrow {
-    font-size: 28px;
+    font-size: 23px;
     font-weight: 400;
   }
 
   .card-content h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(40px, 4vw, 58px);
+    font-size: clamp(32px, 3.5vw, 44px);
     font-weight: 400;
-    margin: 0 0 22px;
+    line-height: 1.2;
+    margin: 0 0 15px;
   }
 
   .card-content p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 26px;
+    font-size: 18px;
     line-height: 1.65;
     color: #625f58;
-    margin: 0 0 30px;
+    margin: 0 0 22px;
   }
 
   .contact-detail {
     display: block;
     font-family: 'DM Sans', sans-serif;
-    font-size: clamp(18px, 2vw, 24px);
+    font-size: 17px;
     font-weight: 600;
     color: #8d533d;
     overflow-wrap: anywhere;
     text-decoration: underline;
-    text-underline-offset: 6px;
+    text-underline-offset: 5px;
   }
 
   /* CLOSING */
 
   .contact-ending {
     text-align: center;
-    padding: 100px 20px 60px;
+    padding: 70px 20px 35px;
     border-top: 1px solid #d8d2c7;
   }
 
   .contact-ending h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(50px, 6vw, 85px);
+    font-size: clamp(42px, 5vw, 62px);
     font-weight: 400;
     line-height: 1.15;
-    margin: 30px 0;
+    margin: 22px 0;
   }
 
   .contact-ending > p:not(.eyebrow) {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    font-size: 26px;
-    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 28px;
+    font-size: 19px;
+    line-height: 1.65;
     color: #625f58;
   }
 
   .home-link {
     display: inline-flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+
     font-family: 'DM Sans', sans-serif;
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 600;
     color: #8d533d;
     text-decoration: none;
-    padding-bottom: 8px;
+
+    padding-bottom: 6px;
     border-bottom: 1px solid #8d533d;
   }
 
@@ -310,23 +339,24 @@ import { SITE_TITLE } from '../consts';
     color: #693c2b;
   }
 
-  /* MOBILE */
+  /* TABLET AND MOBILE */
 
   @media (max-width: 800px) {
     .contact-page {
-      padding-top: 45px;
+      width: min(90%, 620px);
+      padding-top: 35px;
     }
 
     .contact-intro {
-      padding-bottom: 75px;
+      padding-bottom: 55px;
     }
 
     .contact-intro h1 {
-      font-size: clamp(48px, 10vw, 75px);
+      font-size: clamp(40px, 8vw, 60px);
     }
 
     .intro-text {
-      font-size: 23px;
+      font-size: 20px;
     }
 
     .contact-grid {
@@ -334,28 +364,42 @@ import { SITE_TITLE } from '../consts';
     }
 
     .contact-card {
-      min-height: 360px;
-      padding: 30px;
+      min-height: 260px;
+      padding: 27px;
+    }
+
+    .card-content h2 {
+      font-size: 36px;
     }
 
     .card-content p {
-      font-size: 21px;
-    }
-
-    .section-label span {
-      font-size: 14px;
+      font-size: 17px;
     }
 
     .contact-section {
-      margin-bottom: 80px;
+      margin-bottom: 65px;
     }
 
     .contact-ending {
-      padding-top: 75px;
+      padding: 55px 0 25px;
     }
 
     .contact-ending > p:not(.eyebrow) {
-      font-size: 21px;
+      font-size: 17px;
+    }
+
+    .section-label span {
+      font-size: 11px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-card {
+      transition: none;
+    }
+
+    .contact-card:hover {
+      transform: none;
     }
   }
 </style>

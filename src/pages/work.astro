@@ -56,8 +56,6 @@ const experiences = [
 
     <main class="work-page">
 
-      <!-- INTRODUCTION -->
-
       <section class="work-intro">
         <p class="eyebrow">
           EXPERIENCE / EXPLORATION / IMPACT
@@ -273,51 +271,48 @@ const experiences = [
 
 <style>
   .work-page {
-    width: min(92%, 1400px);
+    width: min(90%, 1120px);
     margin: 0 auto;
-    padding: 90px 0 100px;
+    padding: 55px 0 65px;
     color: #252521;
   }
 
-  /* INTRO */
+  /* INTRODUCTION */
 
   .work-intro {
-    padding: 25px 0 130px;
-    max-width: 1150px;
+    max-width: 850px;
+    padding: 15px 0 75px;
   }
 
   .eyebrow {
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: #8d533d;
     margin: 0;
   }
 
   .work-intro h1 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(65px, 8vw, 115px);
+    font-size: clamp(48px, 6vw, 78px);
     font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: -2px;
-    margin: 30px 0 35px;
+    line-height: 1.12;
+    letter-spacing: -1px;
+    margin: 20px 0 25px;
   }
 
-  .work-intro h1 em {
-    font-weight: 400;
-    color: #8d533d;
-  }
-
+  .work-intro h1 em,
   .work-intro h1 span {
     color: #8d533d;
   }
 
   .intro-description {
-    max-width: 850px;
-    font-size: 30px;
-    line-height: 1.6;
+    max-width: 650px;
+    font-size: 22px;
+    line-height: 1.55;
     color: #625f58;
+    margin: 0;
   }
 
   /* SECTION LABELS */
@@ -325,15 +320,15 @@ const experiences = [
   .section-label {
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-bottom: 65px;
+    gap: 18px;
+    margin-bottom: 35px;
   }
 
   .section-label span {
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     color: #8d533d;
     white-space: nowrap;
   }
@@ -347,89 +342,94 @@ const experiences = [
   /* FEATURED PROJECTS */
 
   .featured-project {
-    margin-bottom: 140px;
+    margin-bottom: 85px;
   }
 
   .project-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: start;
   }
 
   .project-type {
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     color: #8d533d;
-    margin: 0 0 28px;
+    margin: 0 0 20px;
   }
 
   .project-heading h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(48px, 5vw, 75px);
+    font-size: clamp(36px, 4vw, 52px);
     font-weight: 400;
-    line-height: 1.15;
-    margin: 0 0 30px;
+    line-height: 1.18;
+    margin: 0 0 20px;
   }
 
   .project-subtitle {
-    font-size: 22px;
+    font-size: 17px;
+    line-height: 1.5;
     color: #625f58;
+    margin: 0;
   }
 
   .project-story p {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 1.7;
     color: #625f58;
-    margin: 0 0 28px;
+    margin: 0 0 18px;
   }
 
   .project-status {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     border-top: 1px solid #d8d2c7;
-    padding-top: 24px;
-    margin-top: 15px;
+    padding-top: 18px;
+    margin-top: 6px;
 
     font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 1px;
     color: #8d533d;
   }
 
   .status-dot {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: #8d533d;
+    flex-shrink: 0;
   }
 
   /* EXPERIENCE SECTION */
 
   .experience-section {
-    margin-bottom: 150px;
+    margin-bottom: 85px;
   }
 
   .experience-intro {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 90px;
-    margin-bottom: 75px;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+    align-items: start;
   }
 
   .experience-intro h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(45px, 4.5vw, 65px);
+    font-size: clamp(36px, 4vw, 50px);
     font-weight: 400;
     line-height: 1.2;
     margin: 0;
   }
 
   .experience-intro p {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 1.7;
     color: #625f58;
     margin: 0;
@@ -441,34 +441,36 @@ const experiences = [
 
   .experience-row {
     display: grid;
-    grid-template-columns: 60px 1fr 1.1fr;
-    gap: 35px;
+    grid-template-columns: 35px 0.9fr 1.1fr;
+    gap: 25px;
     align-items: start;
-    padding: 42px 0;
+    padding: 28px 0;
     border-bottom: 1px solid #d8d2c7;
   }
 
   .experience-number {
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 12px;
     color: #8d533d;
   }
 
   .experience-details h3 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 400;
-    margin: 0 0 12px;
+    line-height: 1.25;
+    margin: 0 0 10px;
   }
 
   .organization {
-    font-size: 20px;
+    font-size: 15px;
+    line-height: 1.5;
     color: #8d533d;
     margin: 0;
   }
 
   .experience-description {
-    font-size: 25px;
+    font-size: 18px;
     line-height: 1.7;
     color: #625f58;
     margin: 0;
@@ -478,22 +480,22 @@ const experiences = [
 
   .work-ending {
     text-align: center;
-    padding: 100px 20px 60px;
+    padding: 70px 20px 35px;
     border-top: 1px solid #d8d2c7;
   }
 
   .work-ending h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(55px, 6vw, 85px);
+    font-size: clamp(42px, 5vw, 64px);
     font-weight: 400;
     line-height: 1.15;
-    margin: 30px 0;
+    margin: 22px 0;
   }
 
   .work-ending > p:not(.eyebrow) {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    font-size: 26px;
+    max-width: 620px;
+    margin: 0 auto 30px;
+    font-size: 19px;
     line-height: 1.7;
     color: #625f58;
   }
@@ -501,13 +503,13 @@ const experiences = [
   .journal-link {
     display: inline-flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 600;
     color: #8d533d;
     text-decoration: none;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
     border-bottom: 1px solid #8d533d;
   }
 
@@ -515,77 +517,79 @@ const experiences = [
     color: #693c2b;
   }
 
-  /* MOBILE */
+  /* TABLET AND MOBILE */
 
   @media (max-width: 800px) {
     .work-page {
-      padding-top: 50px;
+      width: min(90%, 620px);
+      padding-top: 35px;
     }
 
     .work-intro {
-      padding-bottom: 80px;
+      padding-bottom: 60px;
     }
 
     .work-intro h1 {
-      font-size: clamp(52px, 10vw, 80px);
+      font-size: clamp(43px, 9vw, 62px);
     }
 
     .intro-description {
-      font-size: 23px;
+      font-size: 20px;
     }
 
     .project-layout,
     .experience-intro {
       grid-template-columns: 1fr;
-      gap: 35px;
+      gap: 25px;
     }
 
     .featured-project {
-      margin-bottom: 90px;
+      margin-bottom: 65px;
     }
 
     .section-label {
-      margin-bottom: 40px;
+      margin-bottom: 28px;
     }
 
     .section-label span {
-      font-size: 13px;
+      font-size: 11px;
       white-space: normal;
     }
 
     .project-heading h2 {
-      font-size: 48px;
+      font-size: clamp(34px, 7vw, 44px);
     }
 
     .project-story p,
     .experience-intro p {
-      font-size: 21px;
+      font-size: 17px;
     }
 
     .experience-row {
-      grid-template-columns: 40px 1fr;
-      gap: 20px;
+      grid-template-columns: 25px 1fr;
+      gap: 12px 18px;
+      padding: 24px 0;
     }
 
     .experience-description {
       grid-column: 2;
-      font-size: 21px;
+      font-size: 17px;
     }
 
     .experience-details h3 {
-      font-size: 30px;
+      font-size: 25px;
     }
 
     .experience-section {
-      margin-bottom: 90px;
+      margin-bottom: 65px;
     }
 
     .work-ending {
-      padding-top: 75px;
+      padding: 55px 0 25px;
     }
 
     .work-ending > p:not(.eyebrow) {
-      font-size: 21px;
+      font-size: 17px;
     }
   }
 </style>

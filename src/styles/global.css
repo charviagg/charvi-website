@@ -2,10 +2,10 @@
 /*
  * CHARVI AGGARWAL
  * Global Website Styles
- * Editorial / Warm Minimalist Design
+ * Warm Minimalist / Editorial Design
  *
- * Larger, more readable body typography.
- * Heading sizes remain unchanged.
+ * Balanced typography for a polished,
+ * comfortable reading experience.
  */
 
 :root {
@@ -16,7 +16,6 @@
   --gray: 98, 95, 88;
   --gray-light: 235, 230, 220;
   --gray-dark: 37, 37, 33;
-
   --gray-gradient: #f7f4ed, #f7f4ed;
 
   --box-shadow: 0 4px 20px rgba(37, 37, 33, 0.06);
@@ -26,11 +25,11 @@
   --text-secondary: #625f58;
   --border-color: #d8d2c7;
 
-  /* Consistent font sizes */
-  --body-size: 26px;
-  --intro-size: 30px;
-  --label-size: 17px;
-  --nav-size: 23px;
+  /* Balanced font sizes */
+  --body-size: 19px;
+  --intro-size: 23px;
+  --label-size: 13px;
+  --nav-size: 16px;
 }
 
 /* BASE */
@@ -40,7 +39,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -50,7 +49,7 @@ body {
 
   font-family: 'DM Sans', Arial, sans-serif;
   font-size: var(--body-size);
-  line-height: 1.7;
+  line-height: 1.65;
 
   color: var(--text-primary);
   background: var(--background);
@@ -68,7 +67,7 @@ main {
   padding: 0;
 }
 
-/* HEADINGS — ORIGINAL SIZES PRESERVED */
+/* HEADINGS */
 
 h1,
 h2,
@@ -78,39 +77,39 @@ h5,
 h6 {
   font-family: 'Playfair Display', Georgia, serif;
   color: var(--text-primary);
-  line-height: 1.15;
+  line-height: 1.2;
   font-weight: 400;
 }
 
 h1 {
-  font-size: clamp(54px, 6vw, 90px);
+  font-size: clamp(46px, 5vw, 76px);
 }
 
 h2 {
-  font-size: clamp(36px, 4vw, 56px);
+  font-size: clamp(32px, 3.5vw, 50px);
 }
 
 h3 {
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: clamp(25px, 2.5vw, 34px);
 }
 
 h4 {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 h5 {
-  font-size: 23px;
+  font-size: 21px;
 }
 
 h6 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* BODY TEXT */
 
 p {
   font-size: var(--body-size);
-  line-height: 1.7;
+  line-height: 1.65;
   margin: 0 0 1.2em;
 }
 
@@ -120,49 +119,27 @@ b {
 }
 
 /*
- * READABILITY ACROSS ALL PAGES
+ * TYPOGRAPHY
  *
- * These rules override smaller paragraph sizes
- * set inside individual Astro pages.
+ * Let individual pages control their own
+ * special typography and layouts.
  *
- * They do not change heading sizes.
+ * Avoid !important so that page-specific
+ * styles work as intended.
  */
-
-/* All regular paragraphs */
-
-body main p:not(.eyebrow):not(.role):not(.project-category) {
-  font-size: var(--body-size) !important;
-  line-height: 1.7 !important;
-}
-
-/* Homepage and About page introductions */
 
 body main .intro,
 body main .intro-lead {
-  font-size: var(--intro-size) !important;
-  line-height: 1.55 !important;
+  font-size: var(--intro-size);
+  line-height: 1.55;
 }
-
-/* Project, experience and section descriptions */
-
-body main .section-copy p,
-body main .intro-copy p,
-body main .experience-item p:not(.role),
-body main .personal-grid p,
-body main .project p,
-body main .closing p:not(.eyebrow) {
-  font-size: var(--body-size) !important;
-  line-height: 1.7 !important;
-}
-
-/* Special reflective paragraphs */
 
 body main p.reflection {
-  font-size: 30px !important;
-  line-height: 1.55 !important;
+  font-size: 23px;
+  line-height: 1.6;
 }
 
-/* Small editorial labels */
+/* SMALL EDITORIAL LABELS */
 
 body main .eyebrow,
 body main .project-top,
@@ -171,9 +148,9 @@ body main .experience-meta,
 body main .personal-number,
 body main .section-note,
 body main .role {
-  font-size: var(--label-size) !important;
-  line-height: 1.55 !important;
-  letter-spacing: 0.5px;
+  font-size: var(--label-size);
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 /* LINKS */
@@ -193,22 +170,17 @@ a:focus-visible {
 
 /* HEADER AND NAVIGATION */
 
-/*
- * Keeps the existing header design,
- * but makes navigation text larger.
- */
-
 header nav a {
-  font-size: var(--nav-size) !important;
+  font-size: var(--nav-size);
 }
 
 header.site-header .nav-links a {
-  font-size: var(--nav-size) !important;
+  font-size: var(--nav-size);
   line-height: 1.4;
 }
 
 header.site-header .site-name {
-  font-size: 36px !important;
+  font-size: 30px;
 }
 
 /* BLOG CONTENT */
@@ -217,15 +189,14 @@ header.site-header .site-name {
   overflow-wrap: break-word;
 }
 
-.prose p {
-  font-size: var(--body-size) !important;
-  line-height: 1.8 !important;
-  margin-bottom: 1.6em;
-}
-
+.prose p,
 .prose li {
   font-size: var(--body-size);
   line-height: 1.8;
+}
+
+.prose p {
+  margin-bottom: 1.5em;
 }
 
 .prose ul,
@@ -238,7 +209,7 @@ header.site-header .site-name {
 textarea,
 input {
   font-family: inherit;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 textarea {
@@ -283,11 +254,11 @@ pre > code {
 
 blockquote {
   border-left: 3px solid var(--accent);
-  padding: 0 0 0 24px;
+  padding-left: 24px;
   margin: 30px 0;
 
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.6;
 
   color: var(--accent-dark);
@@ -303,98 +274,48 @@ hr {
 /* FOOTER */
 
 footer {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /* MOBILE */
 
 @media (max-width: 720px) {
-
   :root {
-    --body-size: 21px;
-    --intro-size: 24px;
-    --label-size: 14px;
-    --nav-size: 18px;
-  }
-
-  html {
-    font-size: 16px;
+    --body-size: 17px;
+    --intro-size: 20px;
+    --label-size: 12px;
+    --nav-size: 14px;
   }
 
   body {
     font-size: var(--body-size);
-    line-height: 1.7;
+    line-height: 1.65;
   }
-
-  main {
-    padding: 0;
-  }
-
-  /* Paragraphs */
-
-  body main p:not(.eyebrow):not(.role):not(.project-category),
-  body main .section-copy p,
-  body main .intro-copy p,
-  body main .experience-item p:not(.role),
-  body main .personal-grid p,
-  body main .project p,
-  body main .closing p:not(.eyebrow) {
-    font-size: var(--body-size) !important;
-    line-height: 1.7 !important;
-  }
-
-  /* Introductions */
 
   body main .intro,
   body main .intro-lead {
-    font-size: var(--intro-size) !important;
-    line-height: 1.6 !important;
+    font-size: var(--intro-size);
   }
-
-  /* Reflection text */
 
   body main p.reflection {
-    font-size: 24px !important;
+    font-size: 20px;
   }
-
-  /* Labels */
-
-  body main .eyebrow,
-  body main .project-top,
-  body main .project-category,
-  body main .experience-meta,
-  body main .personal-number,
-  body main .section-note,
-  body main .role {
-    font-size: var(--label-size) !important;
-  }
-
-  /* Blog */
 
   .prose p,
   .prose li {
-    font-size: var(--body-size) !important;
-  }
-
-  /* Navigation */
-
-  header nav a,
-  header.site-header .nav-links a {
-    font-size: var(--nav-size) !important;
+    font-size: var(--body-size);
   }
 
   header.site-header .site-name {
-    font-size: 29px !important;
+    font-size: 24px;
   }
 
-  /* Footer */
-
   footer {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 
-/* SCREEN READER ONLY */
+/* ACCESSIBILITY */
 
 .sr-only {
   border: 0;
