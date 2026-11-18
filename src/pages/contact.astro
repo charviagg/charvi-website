@@ -1,0 +1,361 @@
+
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`Contact | ${SITE_TITLE}`}
+      description="Get in touch with Charvi Aggarwal."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="contact-page">
+
+      <section class="contact-intro">
+        <p class="eyebrow">LET'S CONNECT</p>
+
+        <h1>
+          Good things begin<br />
+          with a conversation<span>.</span>
+        </h1>
+
+        <p class="intro-text">
+          I'm always happy to connect with people
+          who are curious about ideas, business,
+          entrepreneurship, and creating
+          meaningful impact.
+        </p>
+      </section>
+
+      <section class="contact-section">
+
+        <div class="section-label">
+          <span>01 / GET IN TOUCH</span>
+          <div class="line"></div>
+        </div>
+
+        <div class="contact-grid">
+
+          <a
+            class="contact-card"
+            href="mailto:charvi038@gmail.com"
+          >
+            <div class="card-top">
+              <span>EMAIL</span>
+              <span class="arrow">↗</span>
+            </div>
+
+            <div class="card-content">
+              <h2>Write to me.</h2>
+
+              <p>
+                For conversations, collaborations,
+                or simply to say hello.
+              </p>
+
+              <span class="contact-detail">
+                charvi038@gmail.com
+              </span>
+            </div>
+          </a>
+
+          <a
+            class="contact-card"
+            href="https://www.linkedin.com/in/charvi537/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="card-top">
+              <span>LINKEDIN</span>
+              <span class="arrow">↗</span>
+            </div>
+
+            <div class="card-content">
+              <h2>Let's connect.</h2>
+
+              <p>
+                Follow my professional journey,
+                experiences, and the ideas
+                I'm exploring.
+              </p>
+
+              <span class="contact-detail">
+                linkedin.com/in/charvi537
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <section class="contact-ending">
+        <p class="eyebrow">UNTIL THEN</p>
+
+        <h2>
+          Here's to ideas<br />
+          worth exploring.
+        </h2>
+
+        <p>
+          Thank you for taking the time
+          to get to know a little about me.
+        </p>
+
+        <a href="/" class="home-link">
+          Back to home <span>↗</span>
+        </a>
+      </section>
+
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .contact-page {
+    width: min(92%, 1400px);
+    margin: 0 auto;
+    padding: 90px 0 100px;
+    color: #252521;
+  }
+
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #8d533d;
+    margin: 0;
+  }
+
+  /* INTRODUCTION */
+
+  .contact-intro {
+    max-width: 1150px;
+    padding: 30px 0 120px;
+  }
+
+  .contact-intro h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(58px, 7vw, 105px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 30px 0 40px;
+  }
+
+  .contact-intro h1 span {
+    color: #8d533d;
+  }
+
+  .intro-text {
+    max-width: 850px;
+    font-size: 30px;
+    line-height: 1.6;
+    color: #625f58;
+  }
+
+  /* SECTION LABEL */
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 45px;
+  }
+
+  .section-label span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #8d533d;
+    white-space: nowrap;
+  }
+
+  .line {
+    flex: 1;
+    height: 1px;
+    background: #d8d2c7;
+  }
+
+  /* CONTACT CARDS */
+
+  .contact-section {
+    margin-bottom: 130px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .contact-card {
+    min-width: 0;
+    min-height: 450px;
+    padding: 45px;
+    border: 1px solid #d8d2c7;
+    text-decoration: none;
+    color: #252521;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .contact-card:hover {
+    background: #eee7dd;
+    border-color: #8d533d;
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #8d533d;
+  }
+
+  .arrow {
+    font-size: 28px;
+    font-weight: 400;
+  }
+
+  .card-content h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(40px, 4vw, 58px);
+    font-weight: 400;
+    margin: 0 0 22px;
+  }
+
+  .card-content p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 26px;
+    line-height: 1.65;
+    color: #625f58;
+    margin: 0 0 30px;
+  }
+
+  .contact-detail {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 600;
+    color: #8d533d;
+    overflow-wrap: anywhere;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  /* CLOSING */
+
+  .contact-ending {
+    text-align: center;
+    padding: 100px 20px 60px;
+    border-top: 1px solid #d8d2c7;
+  }
+
+  .contact-ending h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(50px, 6vw, 85px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 30px 0;
+  }
+
+  .contact-ending > p:not(.eyebrow) {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 26px;
+    line-height: 1.7;
+    color: #625f58;
+  }
+
+  .home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: #8d533d;
+    text-decoration: none;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #8d533d;
+  }
+
+  .home-link:hover {
+    color: #693c2b;
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 800px) {
+    .contact-page {
+      padding-top: 45px;
+    }
+
+    .contact-intro {
+      padding-bottom: 75px;
+    }
+
+    .contact-intro h1 {
+      font-size: clamp(48px, 10vw, 75px);
+    }
+
+    .intro-text {
+      font-size: 23px;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+      min-height: 360px;
+      padding: 30px;
+    }
+
+    .card-content p {
+      font-size: 21px;
+    }
+
+    .section-label span {
+      font-size: 14px;
+    }
+
+    .contact-section {
+      margin-bottom: 80px;
+    }
+
+    .contact-ending {
+      padding-top: 75px;
+    }
+
+    .contact-ending > p:not(.eyebrow) {
+      font-size: 21px;
+    }
+  }
+</style>

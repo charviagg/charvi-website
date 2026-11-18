@@ -1,0 +1,498 @@
+
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+// Automatically get all blog posts, newest first.
+const posts = (await getCollection('blog')).sort(
+  (a, b) =>
+    b.data.pubDate.valueOf() -
+    a.data.pubDate.valueOf()
+);
+
+// The newest article becomes the featured story.
+const featuredPost = posts[0];
+
+// All remaining articles appear below.
+const otherPosts = posts.slice(1);
+
+// Format publication dates nicely.
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`Journal | ${SITE_TITLE}`}
+      description={SITE_DESCRIPTION}
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="journal-page">
+
+      <!-- INTRODUCTION -->
+
+      <section class="journal-intro">
+        <p class="eyebrow">THOUGHTS IN PROGRESS</p>
+
+        <h1>The Journal<span>.</span></h1>
+
+        <p class="journal-description">
+          A space for the things I'm learning,
+          questioning, creating, and figuring
+          out along the way.
+        </p>
+      </section>
+
+      <!-- FEATURED STORY -->
+
+      {
+        featuredPost && (
+          <section class="featured-section">
+            <div class="section-heading">
+              <p class="eyebrow">01 / FEATURED STORY</p>
+              <span class="section-line"></span>
+            </div>
+
+            <a
+              class="featured-card"
+              href={`/blog/${featuredPost.id}/`}
+            >
+              <div class="featured-content">
+
+                <p class="post-date">
+                  {formatDate(featuredPost.data.pubDate)}
+                </p>
+
+                <h2>{featuredPost.data.title}</h2>
+
+                <p class="post-description">
+                  {featuredPost.data.description}
+                </p>
+
+                <span class="read-link">
+                  Read the story →
+                </span>
+
+              </div>
+
+              <div class="featured-art" aria-hidden="true">
+                <span>notes on</span>
+                <strong>becoming.</strong>
+                <span class="art-number">001</span>
+              </div>
+            </a>
+          </section>
+        )
+      }
+
+      <!-- ALL OTHER ARTICLES -->
+
+      <section class="all-posts">
+        <div class="section-heading">
+          <p class="eyebrow">02 / ALL ENTRIES</p>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="section-title-row">
+          <h2>Every story, so far.</h2>
+          <p>Reflections, experiences, and ideas.</p>
+        </div>
+
+        {
+          posts.length === 0 ? (
+            <p class="empty-message">
+              The first story is on its way.
+            </p>
+          ) : otherPosts.length === 0 ? (
+            <p class="empty-message">
+              More stories coming soon.
+            </p>
+          ) : (
+            <div class="posts-grid">
+              {otherPosts.map((post, index) => (
+                <a
+                  class="post-card"
+                  href={`/blog/${post.id}/`}
+                >
+                  <div class="card-top">
+                    <span>
+                      {String(index + 2).padStart(2, '0')}
+                    </span>
+
+                    <span>
+                      {formatDate(post.data.pubDate)}
+                    </span>
+                  </div>
+
+                  <h3>{post.data.title}</h3>
+
+                  <p>{post.data.description}</p>
+
+                  <span class="read-link">
+                    Read entry →
+                  </span>
+                </a>
+              ))}
+            </div>
+          )
+        }
+      </section>
+
+      <!-- CLOSING -->
+
+      <section class="journal-ending">
+        <p class="eyebrow">AN OPEN NOTEBOOK</p>
+
+        <h2>
+          Still learning.<br />
+          Still writing.
+        </h2>
+
+        <p>
+          This space will grow with the experiences,
+          questions, and ideas that shape me.
+        </p>
+      </section>
+
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  /* MAIN PAGE */
+
+  .journal-page {
+    width: min(92%, 1400px);
+    margin: 0 auto;
+    padding: 85px 0 100px;
+    color: #252521;
+  }
+
+  /* EDITORIAL LABELS */
+
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #8d533d;
+    margin: 0;
+  }
+
+  /* INTRO */
+
+  .journal-intro {
+    padding: 30px 0 110px;
+    max-width: 1050px;
+  }
+
+  .journal-intro h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(70px, 9vw, 130px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -3px;
+    margin: 28px 0 32px;
+  }
+
+  .journal-intro h1 span {
+    color: #8d533d;
+  }
+
+  .journal-description {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    line-height: 1.6;
+    max-width: 800px;
+    color: #625f58;
+  }
+
+  /* SECTION DIVIDERS */
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: #d8d2c7;
+  }
+
+  /* FEATURED ARTICLE */
+
+  .featured-section {
+    margin-bottom: 120px;
+  }
+
+  .featured-card {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    min-height: 480px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #d8d2c7;
+    overflow: hidden;
+    transition: background 0.2s ease;
+  }
+
+  .featured-card:hover {
+    background: #f0eae1;
+  }
+
+  .featured-content {
+    padding: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .post-date {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    color: #8d533d;
+    margin-bottom: 28px;
+  }
+
+  .featured-content h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(38px, 4vw, 60px);
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0 0 24px;
+  }
+
+  .post-description {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 25px;
+    line-height: 1.65;
+    color: #625f58;
+    margin-bottom: 35px;
+  }
+
+  .read-link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #8d533d;
+    margin-top: auto;
+  }
+
+  /* FEATURED GRAPHIC */
+
+  .featured-art {
+    background: #e9dfd1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 360px;
+    color: #8d533d;
+  }
+
+  .featured-art > span:first-child {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+
+  .featured-art strong {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(55px, 6vw, 100px);
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -3px;
+  }
+
+  .art-number {
+    position: absolute;
+    bottom: 30px;
+    right: 35px;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  /* ALL POSTS */
+
+  .all-posts {
+    margin-bottom: 130px;
+  }
+
+  .section-title-row {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 45px;
+  }
+
+  .section-title-row h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(40px, 4.5vw, 64px);
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .section-title-row > p {
+    font-size: 20px;
+    color: #625f58;
+    margin: 0;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  /* INDIVIDUAL POST CARDS */
+
+  .post-card {
+    min-height: 360px;
+    padding: 42px;
+    border: 1px solid #d8d2c7;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.2s ease;
+  }
+
+  .post-card:hover {
+    background: #efe9df;
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 16px;
+    color: #8d533d;
+    margin-bottom: 40px;
+  }
+
+  .post-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0 0 20px;
+  }
+
+  .post-card > p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #625f58;
+    margin-bottom: 30px;
+  }
+
+  .empty-message {
+    font-size: 24px;
+    color: #625f58;
+  }
+
+  /* ENDING */
+
+  .journal-ending {
+    text-align: center;
+    padding: 100px 20px;
+    border-top: 1px solid #d8d2c7;
+  }
+
+  .journal-ending h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(48px, 5vw, 75px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 30px 0;
+  }
+
+  .journal-ending > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 1.7;
+    color: #625f58;
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 800px) {
+    .journal-page {
+      padding-top: 45px;
+    }
+
+    .journal-intro {
+      padding-bottom: 65px;
+    }
+
+    .journal-intro h1 {
+      font-size: clamp(56px, 11vw, 80px);
+      letter-spacing: -2px;
+    }
+
+    .journal-description {
+      font-size: 23px;
+    }
+
+    .featured-card {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-content {
+      padding: 35px;
+    }
+
+    .featured-art {
+      min-height: 260px;
+    }
+
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title-row {
+      display: block;
+    }
+
+    .section-title-row > p {
+      margin-top: 15px;
+    }
+
+    .post-card {
+      min-height: 300px;
+      padding: 30px;
+    }
+
+    .featured-section,
+    .all-posts {
+      margin-bottom: 80px;
+    }
+  }
+</style>

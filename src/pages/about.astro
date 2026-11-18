@@ -1,63 +1,558 @@
+
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="About | Charvi Aggarwal"
+      description="Get to know Charvi Aggarwal — her background in business, strategy, entrepreneurship, and social impact."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+  <body>
+    <Header />
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+    <main class="about-page">
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+      <!-- INTRODUCTION -->
+      <section class="intro-section">
+        <p class="eyebrow">THE PERSON BEHIND THE IDEAS / 01</p>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+        <h1>A little <em>about me.</em></h1>
+
+        <div class="intro-grid">
+          <p class="intro-lead">
+            I'm Charvi Aggarwal — a business graduate
+            drawn to the intersection of strategy,
+            entrepreneurship, and meaningful change.
+          </p>
+
+          <div class="intro-copy">
+            <p>
+              My journey has taken me through finance,
+              investment management, corporate transformation,
+              consulting, and early-stage startups.
+            </p>
+            <p>
+              Each experience has shaped how I think about
+              organizations, people, and the possibilities
+              that emerge when ideas meet action.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="section-grid">
+        <div>
+          <p class="eyebrow">02 / THE FOUNDATION</p>
+          <h2>Learning to see the bigger picture.</h2>
+        </div>
+
+        <div class="section-copy">
+          <p>
+            I graduated from Nanyang Technological University
+            in Singapore with a Bachelor of Business,
+            Honours (Merit), specializing in Banking & Finance.
+          </p>
+
+          <p>
+            While my academic foundation was rooted in finance,
+            my experiences beyond the classroom drew me toward
+            broader questions about how businesses operate,
+            adapt, and create value.
+          </p>
+
+          <div class="detail">
+            <span>EDUCATION</span>
+            <strong>Nanyang Technological University, Singapore</strong>
+            <p>Bachelor of Business, Honours (Merit)</p>
+            <p>Specialisation in Banking & Finance</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="experience-section">
+        <p class="eyebrow">03 / EXPERIENCES THAT SHAPED ME</p>
+
+        <div class="section-heading">
+          <h2>From ideas to execution.</h2>
+          <p>
+            Different environments, different challenges,
+            and a growing appreciation for the complexity
+            of building and managing organizations.
+          </p>
+        </div>
+
+        <div class="experience-list">
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <span>01</span>
+              <span>CORPORATE TRANSFORMATION</span>
+            </div>
+            <div>
+              <h3>Singtel</h3>
+              <p class="role">Corporate Transformation Manager · 1 year</p>
+              <p>
+                My experience in corporate transformation
+                gave me an opportunity to work within a
+                large organization and deepen my understanding
+                of organizational change and execution.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <span>02</span>
+              <span>INVESTMENT MANAGEMENT</span>
+            </div>
+            <div>
+              <h3>Helios Capital Management</h3>
+              <p class="role">Investment Intern · 4 months</p>
+              <p>
+                My investment internship in Singapore
+                allowed me to explore business from
+                an investment perspective and broaden
+                my exposure to financial decision-making.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <span>03</span>
+              <span>CONSULTING & LEADERSHIP</span>
+            </div>
+            <div>
+              <h3>NTU PEAK × Nxera</h3>
+              <p class="role">Selected Leadership Programme</p>
+              <p>
+                Through NTU's PEAK Leadership Programme,
+                I worked on a consulting project with Nxera,
+                part of Singtel, exploring challenges related
+                to Power Usage Efficiency under their senior director's guidance.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <span>04</span>
+              <span>SOCIAL CONSULTING</span>
+            </div>
+            <div>
+              <h3>Do Well Do Good</h3>
+              <p class="role">Training Director</p>
+              <p>
+                As Training Director of NTU's social consulting
+                club, I helped train members in consulting
+                frameworks and build connections with
+                partner clubs across the world.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <span>05</span>
+              <span>STARTUPS & COMMUNITY</span>
+            </div>
+            <div>
+              <h3>Learning through smaller teams</h3>
+              <p class="role">Startup volunteering and internships</p>
+              <p>
+                I have also worked with early-stage startups,
+                including an initiative focused on building
+                friendships and community among students
+                in Singapore. These experiences exposed me
+                to different ways of building organizations
+                around people's needs.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CURRENT EXPLORATION -->
+      <section class="exploration-section">
+        <div>
+          <p class="eyebrow">04 / A QUESTION I'M EXPLORING</p>
+          <h2>What happens when the problem is bigger than the idea?</h2>
+        </div>
+
+        <div class="section-copy">
+          <p>
+            I began exploring the issue of agricultural
+            crop-residue burning with an initial idea
+            for an app-based solution.
+          </p>
+
+          <p>
+            But conversations with farmers and agricultural
+            professionals challenged my assumptions.
+            I began to understand that the problem was
+            far more complex than I had anticipated.
+          </p>
+
+          <p>
+            Rather than rushing toward a solution,
+            I'm interested in understanding the
+            constraints, incentives, and perspectives
+            that shape the problem.
+          </p>
+
+          <p class="reflection">
+            Sometimes, the most important part of building
+            something is learning what you don't yet understand.
+          </p>
+        </div>
+      </section>
+
+      <!-- BEYOND WORK -->
+      <section class="personal-section">
+        <p class="eyebrow">05 / BEYOND THE WORK</p>
+        <h2>A curious mind, in more ways than one.</h2>
+
+        <div class="personal-grid">
+
+          <article>
+            <span class="personal-number">01 / READING</span>
+            <h3>Ideas worth revisiting.</h3>
+            <p>
+              One of my favourite books is The Mastery of Self,
+              which explores a Toltec perspective on
+              self-understanding and personal freedom.
+            </p>
+          </article>
+
+          <article>
+            <span class="personal-number">02 / MUSIC</span>
+            <h3>Finding rhythm.</h3>
+            <p>
+              I enjoy playing the harmonium — a creative
+              outlet that offers a different kind of
+              focus and expression.
+            </p>
+          </article>
+
+          <article>
+            <span class="personal-number">03 / ART</span>
+            <h3>Creating on canvas.</h3>
+            <p>
+              Painting gives me space to explore
+              ideas visually, experiment freely,
+              and enjoy the process of creating.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CLOSING -->
+      <section class="closing">
+        <p class="eyebrow">06 / THE JOURNEY CONTINUES</p>
+        <h2>Always curious.<br /><em>Always becoming.</em></h2>
+        <p>
+          I'm continuing to explore the intersection of
+          business, entrepreneurship, and social impact —
+          and documenting what I learn along the way.
+        </p>
+        <a href="/" class="text-link">Back to home ↗</a>
+      </section>
+
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  :global(body) {
+    margin: 0;
+    background: #f7f4ed;
+    color: #252521;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  :global(body) main.about-page {
+    width: min(92%, 1400px);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .about-page * {
+    box-sizing: border-box;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #8d533d;
+    margin: 0 0 24px;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #252521;
+  }
+
+  h1 {
+    font-size: clamp(58px, 7vw, 105px);
+    letter-spacing: -2px;
+    margin: 0 0 45px;
+  }
+
+  h1 em, h2 em {
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: clamp(36px, 4vw, 58px);
+    margin: 0;
+  }
+
+  h3 {
+    font-size: clamp(27px, 2.5vw, 36px);
+    margin: 0 0 10px;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  .intro-section {
+    padding: 75px 0 85px;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+  }
+
+  .intro-lead {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(25px, 2.6vw, 38px);
+    line-height: 1.45;
+    color: #35312b;
+  }
+
+  .intro-copy p,
+  .section-copy p {
+    font-size: 19px;
+    line-height: 1.75;
+    color: #625f58;
+    margin-bottom: 20px;
+  }
+
+  .section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+  }
+
+  .section-grid,
+  .experience-section,
+  .exploration-section,
+  .personal-section,
+  .closing {
+    border-top: 1px solid #d8d2c7;
+    padding: 65px 0 75px;
+  }
+
+  .detail {
+    margin-top: 35px;
+    padding: 25px;
+    background: #ebe6dc;
+  }
+
+  .detail span,
+  .role,
+  .personal-number {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #8d533d;
+    font-weight: 600;
+  }
+
+  .detail strong {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .detail p {
+    font-size: 16px;
+    margin: 4px 0;
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+    margin-bottom: 40px;
+  }
+
+  .section-heading p {
+    font-size: 18px;
+    color: #625f58;
+    line-height: 1.7;
+  }
+
+  .experience-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 7%;
+    padding: 32px 0;
+    border-top: 1px solid #d8d2c7;
+  }
+
+  .experience-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #8d533d;
+  }
+
+  .experience-item p:not(.role) {
+    font-size: 18px;
+    color: #625f58;
+    line-height: 1.7;
+    max-width: 750px;
+    margin: 14px 0 0;
+  }
+
+  .exploration-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+  }
+
+  .reflection {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 25px !important;
+    color: #8d533d !important;
+    padding-top: 15px;
+  }
+
+  .personal-section h2 {
+    max-width: 750px;
+    margin-bottom: 35px;
+  }
+
+  .personal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .personal-grid article {
+    background: #ebe6dc;
+    padding: 30px;
+  }
+
+  .personal-grid h3 {
+    margin: 25px 0 15px;
+  }
+
+  .personal-grid p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #625f58;
+  }
+
+  .closing {
+    text-align: center;
+    padding: 85px 0 100px;
+  }
+
+  .closing p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 25px auto;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #625f58;
+  }
+
+  .text-link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #8d533d;
+    text-decoration: none;
+    border-bottom: 1px solid #8d533d;
+    padding-bottom: 5px;
+  }
+
+  @media (max-width: 850px) {
+    .intro-grid,
+    .section-grid,
+    .section-heading,
+    .exploration-section {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .experience-item {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .personal-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    :global(body) main.about-page {
+      width: calc(100% - 36px);
+    }
+
+    .intro-section {
+      padding: 50px 0;
+    }
+
+    h1 {
+      font-size: 55px;
+    }
+
+    .section-grid,
+    .experience-section,
+    .exploration-section,
+    .personal-section {
+      padding: 45px 0;
+    }
+
+    .closing {
+      padding: 60px 0;
+    }
+
+    .intro-copy p,
+    .section-copy p {
+      font-size: 18px;
+    }
+  }
+</style>

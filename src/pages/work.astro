@@ -1,0 +1,591 @@
+
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+const experiences = [
+  {
+    number: '01',
+    title: 'Corporate Transformation',
+    organization: 'Singtel',
+    description:
+      'Spent a year working as a Corporate Transformation Manager, gaining exposure to how a large organization approaches change, strategy, and execution.',
+  },
+  {
+    number: '02',
+    title: 'Investment Management',
+    organization: 'Helios Capital Management',
+    description:
+      'Completed a four-month investment internship in Singapore, exploring the analytical and decision-making processes behind investment management.',
+  },
+  {
+    number: '03',
+    title: 'Startups & Community',
+    organization: 'Early-stage ventures',
+    description:
+      'Worked with startups across different stages and ideas, including an initiative focused on friendship and community-building in Singapore student life.',
+  },
+  {
+    number: '04',
+    title: 'Social Consulting & Leadership',
+    organization: 'Do Well Do Good (DWDG), NTU',
+    description:
+      'Served as Training Director for a student-led social consulting club, helping members develop consulting skills and connecting with partner clubs globally.',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`Work & Impact | ${SITE_TITLE}`}
+      description="Projects, experiences, and explorations by Charvi Aggarwal."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="work-page">
+
+      <!-- INTRODUCTION -->
+
+      <section class="work-intro">
+        <p class="eyebrow">
+          EXPERIENCE / EXPLORATION / IMPACT
+        </p>
+
+        <h1>
+          Work <em>&</em> Impact<span>.</span>
+        </h1>
+
+        <p class="intro-description">
+          A collection of projects, experiences,
+          and questions that have shaped how
+          I approach problems.
+        </p>
+      </section>
+
+      <!-- FEATURED PROJECT 01 -->
+
+      <section class="featured-project">
+
+        <div class="section-label">
+          <span>01 / EXPLORING COMPLEX PROBLEMS</span>
+          <div class="line"></div>
+        </div>
+
+        <div class="project-layout">
+
+          <div class="project-heading">
+            <p class="project-type">
+              INDEPENDENT EXPLORATION
+            </p>
+
+            <h2>
+              Beyond the<br />
+              first idea.
+            </h2>
+
+            <p class="project-subtitle">
+              Crop-residue burning in India
+            </p>
+          </div>
+
+          <div class="project-story">
+            <p>
+              I began exploring the challenge of
+              crop-residue burning with an initial
+              idea for an app.
+            </p>
+
+            <p>
+              But conversations with farmers and
+              agricultural professionals made me
+              realize that the problem was far more
+              complex than I'd initially understood.
+            </p>
+
+            <p>
+              The experience has encouraged me to
+              look beyond an immediate solution
+              and spend more time understanding
+              the people, systems, and constraints
+              involved.
+            </p>
+
+            <div class="project-status">
+              <span class="status-dot"></span>
+              EARLY-STAGE EXPLORATION
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECT 02 -->
+
+      <section class="featured-project">
+
+        <div class="section-label">
+          <span>02 / STRATEGY & OPERATIONS</span>
+          <div class="line"></div>
+        </div>
+
+        <div class="project-layout">
+
+          <div class="project-heading">
+            <p class="project-type">
+              NTU PEAK LEADERSHIP PROGRAMME
+            </p>
+
+            <h2>
+              Understanding<br />
+              efficiency at scale.
+            </h2>
+
+            <p class="project-subtitle">
+              Nxera / Singtel
+            </p>
+          </div>
+
+          <div class="project-story">
+            <p>
+              Through the NTU PEAK Leadership
+              Programme, I was selected to work
+              on a consulting project with Nxera,
+              part of Singtel.
+            </p>
+
+            <p>
+              The project involved helping a senior
+              director examine power usage
+              efficiency in a data-centre context.
+            </p>
+
+            <p>
+              It was an opportunity to learn about
+              a technically complex industry while
+              approaching the challenge through
+              a business and consulting lens.
+            </p>
+
+            <div class="project-status">
+              <span class="status-dot"></span>
+              CONSULTING PROJECT
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+
+      <section class="experience-section">
+
+        <div class="section-label">
+          <span>03 / EXPERIENCES THAT SHAPED ME</span>
+          <div class="line"></div>
+        </div>
+
+        <div class="experience-intro">
+          <h2>
+            Learning across<br />
+            different worlds.
+          </h2>
+
+          <p>
+            From investment management to
+            corporate transformation, startups,
+            and social consulting, I've been
+            drawn to opportunities that push
+            me into unfamiliar territory.
+          </p>
+        </div>
+
+        <div class="experience-list">
+          {
+            experiences.map((experience) => (
+              <article class="experience-row">
+
+                <span class="experience-number">
+                  {experience.number}
+                </span>
+
+                <div class="experience-details">
+                  <h3>{experience.title}</h3>
+
+                  <p class="organization">
+                    {experience.organization}
+                  </p>
+                </div>
+
+                <p class="experience-description">
+                  {experience.description}
+                </p>
+
+              </article>
+            ))
+          }
+        </div>
+
+      </section>
+
+      <!-- CLOSING -->
+
+      <section class="work-ending">
+
+        <p class="eyebrow">
+          THE THREAD THROUGH IT ALL
+        </p>
+
+        <h2>
+          Stay curious.<br />
+          Keep creating.
+        </h2>
+
+        <p>
+          Different industries, different challenges,
+          and different perspectives — but a
+          continuing desire to learn, build,
+          and create meaningful impact.
+        </p>
+
+        <a href="/journal" class="journal-link">
+          Explore my Journal <span>↗</span>
+        </a>
+
+      </section>
+
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .work-page {
+    width: min(92%, 1400px);
+    margin: 0 auto;
+    padding: 90px 0 100px;
+    color: #252521;
+  }
+
+  /* INTRO */
+
+  .work-intro {
+    padding: 25px 0 130px;
+    max-width: 1150px;
+  }
+
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #8d533d;
+    margin: 0;
+  }
+
+  .work-intro h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(65px, 8vw, 115px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin: 30px 0 35px;
+  }
+
+  .work-intro h1 em {
+    font-weight: 400;
+    color: #8d533d;
+  }
+
+  .work-intro h1 span {
+    color: #8d533d;
+  }
+
+  .intro-description {
+    max-width: 850px;
+    font-size: 30px;
+    line-height: 1.6;
+    color: #625f58;
+  }
+
+  /* SECTION LABELS */
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 65px;
+  }
+
+  .section-label span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #8d533d;
+    white-space: nowrap;
+  }
+
+  .line {
+    flex: 1;
+    height: 1px;
+    background: #d8d2c7;
+  }
+
+  /* FEATURED PROJECTS */
+
+  .featured-project {
+    margin-bottom: 140px;
+  }
+
+  .project-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+
+  .project-type {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #8d533d;
+    margin: 0 0 28px;
+  }
+
+  .project-heading h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(48px, 5vw, 75px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 0 30px;
+  }
+
+  .project-subtitle {
+    font-size: 22px;
+    color: #625f58;
+  }
+
+  .project-story p {
+    font-size: 26px;
+    line-height: 1.7;
+    color: #625f58;
+    margin: 0 0 28px;
+  }
+
+  .project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #d8d2c7;
+    padding-top: 24px;
+    margin-top: 15px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #8d533d;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8d533d;
+  }
+
+  /* EXPERIENCE SECTION */
+
+  .experience-section {
+    margin-bottom: 150px;
+  }
+
+  .experience-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    margin-bottom: 75px;
+  }
+
+  .experience-intro h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(45px, 4.5vw, 65px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .experience-intro p {
+    font-size: 26px;
+    line-height: 1.7;
+    color: #625f58;
+    margin: 0;
+  }
+
+  .experience-list {
+    border-top: 1px solid #d8d2c7;
+  }
+
+  .experience-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 1.1fr;
+    gap: 35px;
+    align-items: start;
+    padding: 42px 0;
+    border-bottom: 1px solid #d8d2c7;
+  }
+
+  .experience-number {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    color: #8d533d;
+  }
+
+  .experience-details h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0 0 12px;
+  }
+
+  .organization {
+    font-size: 20px;
+    color: #8d533d;
+    margin: 0;
+  }
+
+  .experience-description {
+    font-size: 25px;
+    line-height: 1.7;
+    color: #625f58;
+    margin: 0;
+  }
+
+  /* ENDING */
+
+  .work-ending {
+    text-align: center;
+    padding: 100px 20px 60px;
+    border-top: 1px solid #d8d2c7;
+  }
+
+  .work-ending h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(55px, 6vw, 85px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 30px 0;
+  }
+
+  .work-ending > p:not(.eyebrow) {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 26px;
+    line-height: 1.7;
+    color: #625f58;
+  }
+
+  .journal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: #8d533d;
+    text-decoration: none;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #8d533d;
+  }
+
+  .journal-link:hover {
+    color: #693c2b;
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 800px) {
+    .work-page {
+      padding-top: 50px;
+    }
+
+    .work-intro {
+      padding-bottom: 80px;
+    }
+
+    .work-intro h1 {
+      font-size: clamp(52px, 10vw, 80px);
+    }
+
+    .intro-description {
+      font-size: 23px;
+    }
+
+    .project-layout,
+    .experience-intro {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    .featured-project {
+      margin-bottom: 90px;
+    }
+
+    .section-label {
+      margin-bottom: 40px;
+    }
+
+    .section-label span {
+      font-size: 13px;
+      white-space: normal;
+    }
+
+    .project-heading h2 {
+      font-size: 48px;
+    }
+
+    .project-story p,
+    .experience-intro p {
+      font-size: 21px;
+    }
+
+    .experience-row {
+      grid-template-columns: 40px 1fr;
+      gap: 20px;
+    }
+
+    .experience-description {
+      grid-column: 2;
+      font-size: 21px;
+    }
+
+    .experience-details h3 {
+      font-size: 30px;
+    }
+
+    .experience-section {
+      margin-bottom: 90px;
+    }
+
+    .work-ending {
+      padding-top: 75px;
+    }
+
+    .work-ending > p:not(.eyebrow) {
+      font-size: 21px;
+    }
+  }
+</style>
