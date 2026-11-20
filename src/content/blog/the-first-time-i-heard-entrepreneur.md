@@ -2,7 +2,7 @@
 ---
 title: "The First Time I Heard the Word Entrepreneur"
 description: "At eleven, a quilling exhibition became my unexpected introduction to entrepreneurship."
-pubDate: 2026-11-18
+pubDate: 2026-08-15
 ---
 
 I was eleven when I first heard the word *entrepreneur*.
@@ -12,6 +12,12 @@ It started with quilling — the art of turning thin strips of paper into someth
 Everything sold out on the first day.
 
 The experience led to a feature in *The Times of India*, where I was described as the youngest entrepreneur. Until then, I hadn't really known what the word meant.
+
+
+<figure>
+  <img src="/quilling-newspaper-feature.jpeg" width="960" height="540" loading="lazy" decoding="async" alt="Newspaper clipping showing Charvi Aggarwal beside her framed paper quilling artwork." />
+  <figcaption>My paper quilling work, featured in <cite>The Times of India</cite>.</figcaption>
+</figure>
 
 Looking back, what stays with me isn't just the exhibition or the newspaper feature. It's the excitement of making something from scratch and seeing other people connect with it.
 

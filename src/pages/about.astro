@@ -26,8 +26,6 @@ import Footer from '../components/Footer.astro';
       <!-- INTRODUCTION -->
 
       <section class="intro-section">
-        <p class="eyebrow">THE PERSON BEHIND THE IDEAS / 01</p>
-
         <h1>A little <em>about me.</em></h1>
 
         <div class="intro-grid">
@@ -56,7 +54,6 @@ import Footer from '../components/Footer.astro';
 
       <section class="section-grid">
         <div>
-          <p class="eyebrow">02 / THE FOUNDATION</p>
           <h2>Learning to see the bigger picture.</h2>
         </div>
 
@@ -86,8 +83,6 @@ import Footer from '../components/Footer.astro';
       <!-- EXPERIENCE -->
 
       <section class="experience-section">
-        <p class="eyebrow">03 / EXPERIENCES THAT SHAPED ME</p>
-
         <div class="section-heading">
           <h2>From ideas to execution.</h2>
           <p>
@@ -193,7 +188,6 @@ import Footer from '../components/Footer.astro';
 
       <section class="exploration-section">
         <div>
-          <p class="eyebrow">04 / A QUESTION I'M EXPLORING</p>
           <h2>What happens when the problem is bigger than the idea?</h2>
         </div>
 
@@ -228,7 +222,6 @@ import Footer from '../components/Footer.astro';
       <!-- BEYOND WORK -->
 
       <section class="personal-section">
-        <p class="eyebrow">05 / BEYOND THE WORK</p>
         <h2>A curious mind, in more ways than one.</h2>
 
         <div class="personal-grid">
@@ -261,6 +254,9 @@ import Footer from '../components/Footer.astro';
               ideas visually, experiment freely,
               and enjoy the process of creating.
             </p>
+            <a href="/blog/the-first-time-i-heard-entrepreneur/" class="text-link">
+              How quilling introduced me to entrepreneurship
+            </a>
           </article>
 
         </div>
@@ -269,7 +265,6 @@ import Footer from '../components/Footer.astro';
       <!-- CLOSING -->
 
       <section class="closing">
-        <p class="eyebrow">06 / THE JOURNEY CONTINUES</p>
         <h2>Always curious.<br /><em>Always becoming.</em></h2>
         <p>
           I'm continuing to explore the intersection of
@@ -302,22 +297,13 @@ import Footer from '../components/Footer.astro';
 
   /* TYPOGRAPHY */
 
-  .about-page .eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    color: #8d533d;
-    margin: 0 0 10px;
-  }
-
   .about-page h1,
   .about-page h2,
   .about-page h3 {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 400;
     line-height: 1.15;
-    color: #252521;
+    color: var(--text-primary);
   }
 
   .about-page h1 {
@@ -357,16 +343,16 @@ import Footer from '../components/Footer.astro';
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 20px;
     line-height: 1.45;
-    color: #35312b;
+    color: var(--text-primary);
     margin: 0;
   }
 
   .intro-copy p,
   .section-copy p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    line-height: 1.55;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0 0 12px;
   }
 
@@ -387,7 +373,7 @@ import Footer from '../components/Footer.astro';
   .exploration-section,
   .personal-section,
   .closing {
-    border-top: 1px solid #d8d2c7;
+    border-top: 1px solid var(--border-color);
     padding: 24px 0 28px;
   }
 
@@ -396,7 +382,7 @@ import Footer from '../components/Footer.astro';
   .detail {
     margin-top: 14px;
     padding: 16px 18px;
-    background: #ebe6dc;
+    background: var(--surface);
   }
 
   .detail span,
@@ -404,7 +390,7 @@ import Footer from '../components/Footer.astro';
   .personal-number {
     font-size: 10px;
     letter-spacing: 0.8px;
-    color: #8d533d;
+    color: var(--accent);
     font-weight: 600;
   }
 
@@ -418,7 +404,7 @@ import Footer from '../components/Footer.astro';
   .detail p {
     font-size: 13px;
     margin: 3px 0;
-    color: #625f58;
+    color: var(--text-secondary);
   }
 
   /* EXPERIENCE */
@@ -431,9 +417,9 @@ import Footer from '../components/Footer.astro';
   }
 
   .section-heading p {
-    font-size: 15px;
-    color: #625f58;
-    line-height: 1.55;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
     margin: 0;
   }
 
@@ -442,7 +428,7 @@ import Footer from '../components/Footer.astro';
     grid-template-columns: 1fr 2fr;
     gap: 30px;
     padding: 15px 0;
-    border-top: 1px solid #d8d2c7;
+    border-top: 1px solid var(--border-color);
   }
 
   .experience-meta {
@@ -451,7 +437,7 @@ import Footer from '../components/Footer.astro';
     font-size: 10px;
     letter-spacing: 0.8px;
     font-weight: 600;
-    color: #8d533d;
+    color: var(--accent);
     padding-top: 4px;
   }
 
@@ -464,7 +450,7 @@ import Footer from '../components/Footer.astro';
   .experience-item p:not(.role) {
     font-family: 'DM Sans', sans-serif;
     font-size: 15px;
-    color: #625f58;
+    color: var(--text-secondary);
     line-height: 1.55;
     margin: 0;
   }
@@ -482,7 +468,7 @@ import Footer from '../components/Footer.astro';
     font-style: italic;
     font-size: 18px;
     line-height: 1.45;
-    color: #8d533d;
+    color: var(--accent);
     margin-top: 16px;
   }
 
@@ -499,7 +485,7 @@ import Footer from '../components/Footer.astro';
   }
 
   .personal-grid article {
-    background: #ebe6dc;
+    background: var(--surface);
     padding: 18px;
   }
 
@@ -509,9 +495,9 @@ import Footer from '../components/Footer.astro';
   }
 
   .personal-grid p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0;
   }
 
@@ -526,21 +512,21 @@ import Footer from '../components/Footer.astro';
     font-size: 30px;
   }
 
-  .closing p:not(.eyebrow) {
+  .closing p {
     max-width: 530px;
     margin: 12px auto;
-    font-size: 15px;
-    line-height: 1.55;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
   }
 
   .text-link {
     display: inline-block;
     font-size: 13px;
     font-weight: 600;
-    color: #8d533d;
+    color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid #8d533d;
+    border-bottom: 1px solid var(--accent);
     padding-bottom: 3px;
   }
 
@@ -598,5 +584,21 @@ import Footer from '../components/Footer.astro';
     .closing {
       padding: 25px 0 30px;
     }
+  }
+
+  .about-page h1 {
+    font-size: clamp(2.3rem, 5vw, 3.45rem);
+    letter-spacing: -0.035em;
+  }
+
+  .intro-section {
+    padding-top: clamp(1rem, 3vw, 2.5rem);
+    padding-bottom: clamp(1.75rem, 4vw, 3rem);
+  }
+
+  .personal-grid article,
+  .detail {
+    border-top: 2px solid var(--accent);
+    border-radius: 2px 2px 1.25rem 2px;
   }
 </style>

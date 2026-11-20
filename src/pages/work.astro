@@ -59,10 +59,6 @@ const experiences = [
       <!-- INTRODUCTION -->
 
       <section class="work-intro">
-        <p class="eyebrow">
-          EXPERIENCE / EXPLORATION / IMPACT
-        </p>
-
         <h1>
           Work <em>&amp;</em> Impact<span>.</span>
         </h1>
@@ -77,11 +73,6 @@ const experiences = [
       <!-- FEATURED PROJECT 01 -->
 
       <section class="featured-project">
-        <div class="section-label">
-          <span>01 / EXPLORING COMPLEX PROBLEMS</span>
-          <div class="line"></div>
-        </div>
-
         <div class="project-layout">
           <div class="project-heading">
             <p class="project-type">
@@ -131,11 +122,6 @@ const experiences = [
       <!-- FEATURED PROJECT 02 -->
 
       <section class="featured-project">
-        <div class="section-label">
-          <span>02 / STRATEGY &amp; OPERATIONS</span>
-          <div class="line"></div>
-        </div>
-
         <div class="project-layout">
           <div class="project-heading">
             <p class="project-type">
@@ -184,11 +170,6 @@ const experiences = [
       <!-- EXPERIENCE SECTION -->
 
       <section class="experience-section">
-        <div class="section-label">
-          <span>03 / EXPERIENCES THAT SHAPED ME</span>
-          <div class="line"></div>
-        </div>
-
         <div class="experience-intro">
           <h2>
             Learning across<br />
@@ -232,10 +213,6 @@ const experiences = [
       <!-- CLOSING -->
 
       <section class="work-ending">
-        <p class="eyebrow">
-          THE THREAD THROUGH IT ALL
-        </p>
-
         <h2>
           Stay curious.<br />
           Keep creating.
@@ -266,19 +243,10 @@ const experiences = [
     width: min(90%, 1050px);
     margin: 0 auto;
     padding: 26px 0 40px;
-    color: #252521;
+    color: var(--text-primary);
   }
 
   /* TYPOGRAPHY */
-
-  .work-page .eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    color: #8d533d;
-    margin: 0;
-  }
 
   .work-page h1,
   .work-page h2,
@@ -286,7 +254,7 @@ const experiences = [
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 400;
     line-height: 1.15;
-    color: #252521;
+    color: var(--text-primary);
   }
 
   /* INTRODUCTION */
@@ -304,40 +272,18 @@ const experiences = [
 
   .work-intro h1 em,
   .work-intro h1 span {
-    color: #8d533d;
+    color: var(--accent);
   }
 
   .intro-description {
     max-width: 560px;
     font-size: 16px;
-    line-height: 1.55;
-    color: #625f58;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0;
   }
 
   /* SECTION LABELS */
-
-  .section-label {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 18px;
-  }
-
-  .section-label span {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #8d533d;
-    white-space: nowrap;
-  }
-
-  .line {
-    flex: 1;
-    height: 1px;
-    background: #d8d2c7;
-  }
 
   /* FEATURED PROJECTS */
 
@@ -357,7 +303,7 @@ const experiences = [
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #8d533d;
+    color: var(--accent);
     margin: 0 0 10px;
   }
 
@@ -369,14 +315,14 @@ const experiences = [
   .project-subtitle {
     font-size: 14px;
     line-height: 1.5;
-    color: #625f58;
+    color: var(--text-secondary);
     margin: 0;
   }
 
   .project-story p {
-    font-size: 15px;
-    line-height: 1.55;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0 0 10px;
   }
 
@@ -384,7 +330,7 @@ const experiences = [
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    border-top: 1px solid #d8d2c7;
+    border-top: 1px solid var(--border-color);
     padding-top: 10px;
     margin-top: 4px;
 
@@ -392,14 +338,14 @@ const experiences = [
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.8px;
-    color: #8d533d;
+    color: var(--accent);
   }
 
   .status-dot {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #8d533d;
+    background: var(--accent);
     flex-shrink: 0;
   }
 
@@ -423,14 +369,14 @@ const experiences = [
   }
 
   .experience-intro p {
-    font-size: 15px;
-    line-height: 1.55;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0;
   }
 
   .experience-list {
-    border-top: 1px solid #d8d2c7;
+    border-top: 1px solid var(--border-color);
   }
 
   .experience-row {
@@ -439,13 +385,13 @@ const experiences = [
     gap: 18px;
     align-items: start;
     padding: 14px 0;
-    border-bottom: 1px solid #d8d2c7;
+    border-bottom: 1px solid var(--border-color);
   }
 
   .experience-number {
     font-family: 'DM Sans', sans-serif;
     font-size: 10px;
-    color: #8d533d;
+    color: var(--accent);
   }
 
   .experience-details h3 {
@@ -456,14 +402,14 @@ const experiences = [
   .organization {
     font-size: 13px;
     line-height: 1.4;
-    color: #8d533d;
+    color: var(--accent);
     margin: 0;
   }
 
   .experience-description {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0;
   }
 
@@ -472,7 +418,7 @@ const experiences = [
   .work-ending {
     text-align: center;
     padding: 30px 20px 25px;
-    border-top: 1px solid #d8d2c7;
+    border-top: 1px solid var(--border-color);
   }
 
   .work-ending h2 {
@@ -480,12 +426,12 @@ const experiences = [
     margin: 12px 0;
   }
 
-  .work-ending > p:not(.eyebrow) {
+  .work-ending > p {
     max-width: 530px;
     margin: 0 auto 15px;
-    font-size: 15px;
-    line-height: 1.55;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
   }
 
   .journal-link {
@@ -495,14 +441,14 @@ const experiences = [
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
     font-weight: 600;
-    color: #8d533d;
+    color: var(--accent);
     text-decoration: none;
     padding-bottom: 3px;
-    border-bottom: 1px solid #8d533d;
+    border-bottom: 1px solid var(--accent);
   }
 
   .journal-link:hover {
-    color: #693c2b;
+    color: var(--accent-dark);
   }
 
   /* TABLET AND MOBILE */
@@ -531,14 +477,6 @@ const experiences = [
       margin-bottom: 26px;
     }
 
-    .section-label {
-      margin-bottom: 14px;
-    }
-
-    .section-label span {
-      white-space: normal;
-    }
-
     .experience-row {
       grid-template-columns: 25px 1fr;
       gap: 8px 12px;
@@ -552,5 +490,24 @@ const experiences = [
     .work-ending {
       padding: 25px 0;
     }
+  }
+
+  .work-page h1 {
+    font-size: clamp(2.3rem, 5vw, 3.45rem);
+    letter-spacing: -0.035em;
+  }
+
+  .work-intro {
+    padding-top: clamp(1rem, 3vw, 2.5rem);
+    padding-bottom: clamp(1.75rem, 4vw, 3rem);
+  }
+
+  .featured-project {
+    margin-bottom: clamp(2rem, 5vw, 3.75rem);
+  }
+
+  .project-heading {
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
   }
 </style>

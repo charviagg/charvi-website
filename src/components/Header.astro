@@ -1,136 +1,65 @@
-
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="site-header">
-  <nav class="navigation" aria-label="Main navigation">
-
+  <nav aria-label="Main navigation">
     <a href="/" class="site-name">{SITE_TITLE}</a>
-
-    
-<div class="nav-links">
-  <HeaderLink href="/">Home</HeaderLink>
-  <HeaderLink href="/about">About</HeaderLink>
-  <HeaderLink href="/work">Work</HeaderLink>
-  <HeaderLink href="/journal">Journal</HeaderLink>
-  <HeaderLink href="/contact">Contact</HeaderLink>
-</div>
-
-
-    <div class="header-detail">
-      <span>IDEAS · IMPACT · ENTREPRENEURSHIP</span>
+    <div class="nav-links">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+      <HeaderLink href="/work">Work</HeaderLink>
+      <HeaderLink href="/journal">Journal</HeaderLink>
+      <HeaderLink href="/contact">Contact</HeaderLink>
     </div>
-
   </nav>
 </header>
 
 <style>
   .site-header {
-    width: 100%;
-    background: #f7f4ed;
-    border-bottom: 1px solid #d8d2c7;
-    box-shadow: none;
-    padding: 0 4%;
-    position: relative;
-    z-index: 10;
+    border-top: 2px solid var(--indigo);
+    border-bottom: 1px solid var(--border-color);
   }
 
-  .navigation {
-    width: 100%;
-    max-width: 1400px;
-    min-height: 88px;
-    margin: 0 auto;
+  nav {
+    width: min(90%, 1050px);
+    min-height: 4.75rem;
+    margin-inline: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 0.35rem 1.5rem;
+    padding-block: 0.75rem;
   }
 
   .site-name {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 27px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    color: #252521;
+    color: var(--indigo);
     text-decoration: none;
-    white-space: nowrap;
-    padding: 0;
-    border: none;
   }
 
   .site-name:hover {
-    color: #8d533d;
+    color: var(--accent);
   }
 
   .nav-links {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+    flex-wrap: wrap;
+    gap: 0 clamp(0.75rem, 3vw, 1.75rem);
   }
 
   .nav-links :global(a) {
-    display: inline-block;
-    font-family: 'DM Sans', Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: #625f58;
+    color: var(--text-secondary);
+    padding-block: 0.4rem;
     text-decoration: none;
-    padding: 10px 0;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
+    border-bottom: 1px solid transparent;
   }
 
-  .nav-links :global(a:hover) {
-    color: #8d533d;
-  }
-
+  .nav-links :global(a:hover),
   .nav-links :global(a.active) {
-    color: #252521;
-    border-bottom-color: #8d533d;
-  }
-
-  .header-detail {
-    font-family: 'DM Sans', Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    color: #8d533d;
-    white-space: nowrap;
-  }
-
-  @media (max-width: 1100px) {
-    .header-detail {
-      display: none;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .site-header {
-      padding: 12px 20px;
-    }
-
-    .navigation {
-      min-height: 72px;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .site-name {
-      font-size: 25px;
-    }
-
-    .nav-links {
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links :global(a) {
-      font-size: 16px;
-      padding: 6px 0;
-    }
+    color: var(--indigo);
+    border-bottom-color: var(--accent);
   }
 </style>

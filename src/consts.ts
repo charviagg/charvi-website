@@ -2,4 +2,4 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'Charvi Aggarwal';
-export const SITE_DESCRIPTION = 'A personal space for entrepeneurship, creativity, and learning.';
+export const SITE_DESCRIPTION = 'A personal space for entrepreneurship, creativity, and learning.';

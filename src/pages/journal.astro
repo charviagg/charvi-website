@@ -50,8 +50,6 @@ const formatDate = (date: Date) =>
       <!-- INTRODUCTION -->
 
       <section class="journal-intro">
-        <p class="eyebrow">THOUGHTS IN PROGRESS</p>
-
         <h1>The Journal<span>.</span></h1>
 
         <p class="journal-description">
@@ -66,11 +64,6 @@ const formatDate = (date: Date) =>
       {
         featuredPost && (
           <section class="featured-section">
-            <div class="section-heading">
-              <p class="eyebrow">01 / FEATURED STORY</p>
-              <span class="section-line"></span>
-            </div>
-
             <a
               class="featured-card"
               href={`/blog/${featuredPost.id}/`}
@@ -104,11 +97,6 @@ const formatDate = (date: Date) =>
       <!-- ALL OTHER ARTICLES -->
 
       <section class="all-posts">
-        <div class="section-heading">
-          <p class="eyebrow">02 / ALL ENTRIES</p>
-          <span class="section-line"></span>
-        </div>
-
         <div class="section-title-row">
           <h2>Every story, so far.</h2>
           <p>Reflections, experiences, and ideas.</p>
@@ -157,8 +145,6 @@ const formatDate = (date: Date) =>
       <!-- CLOSING -->
 
       <section class="journal-ending">
-        <p class="eyebrow">AN OPEN NOTEBOOK</p>
-
         <h2>
           Still learning.<br />
           Still writing.
@@ -183,7 +169,7 @@ const formatDate = (date: Date) =>
     width: min(90%, 1050px);
     margin: 0 auto;
     padding: 26px 0 40px;
-    color: #252521;
+    color: var(--text-primary);
   }
 
   .journal-page * {
@@ -192,22 +178,13 @@ const formatDate = (date: Date) =>
 
   /* TYPOGRAPHY */
 
-  .journal-page .eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    color: #8d533d;
-    margin: 0;
-  }
-
   .journal-page h1,
   .journal-page h2,
   .journal-page h3 {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 400;
     line-height: 1.15;
-    color: #252521;
+    color: var(--text-primary);
   }
 
   /* INTRODUCTION */
@@ -224,32 +201,19 @@ const formatDate = (date: Date) =>
   }
 
   .journal-intro h1 span {
-    color: #8d533d;
+    color: var(--accent);
   }
 
   .journal-description {
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
-    line-height: 1.55;
+    line-height: 1.65;
     max-width: 560px;
-    color: #625f58;
+    color: var(--text-secondary);
     margin: 0;
   }
 
   /* SECTION DIVIDERS */
-
-  .section-heading {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-
-  .section-line {
-    flex: 1;
-    height: 1px;
-    background: #d8d2c7;
-  }
 
   /* FEATURED ARTICLE */
 
@@ -263,13 +227,13 @@ const formatDate = (date: Date) =>
     min-height: 210px;
     text-decoration: none;
     color: inherit;
-    border: 1px solid #d8d2c7;
+    border: 1px solid var(--border-color);
     overflow: hidden;
     transition: background 0.2s ease;
   }
 
   .featured-card:hover {
-    background: #f0eae1;
+    background: var(--surface-hover);
   }
 
   .featured-content {
@@ -283,7 +247,7 @@ const formatDate = (date: Date) =>
   .post-date {
     font-family: 'DM Sans', sans-serif;
     font-size: 11px;
-    color: #8d533d;
+    color: var(--accent);
     margin: 0 0 9px;
   }
 
@@ -295,9 +259,9 @@ const formatDate = (date: Date) =>
 
   .post-description {
     font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0 0 14px;
   }
 
@@ -305,20 +269,20 @@ const formatDate = (date: Date) =>
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     font-weight: 600;
-    color: #8d533d;
+    color: var(--accent);
   }
 
   /* FEATURED GRAPHIC */
 
   .featured-art {
-    background: #e9dfd1;
+    background: var(--surface);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     min-height: 210px;
-    color: #8d533d;
+    color: var(--accent);
     padding: 18px;
   }
 
@@ -364,8 +328,8 @@ const formatDate = (date: Date) =>
   }
 
   .section-title-row > p {
-    font-size: 14px;
-    color: #625f58;
+    font-size: 1rem;
+    color: var(--text-secondary);
     margin: 0;
   }
 
@@ -380,7 +344,7 @@ const formatDate = (date: Date) =>
   .post-card {
     min-height: 165px;
     padding: 18px;
-    border: 1px solid #d8d2c7;
+    border: 1px solid var(--border-color);
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -389,7 +353,7 @@ const formatDate = (date: Date) =>
   }
 
   .post-card:hover {
-    background: #efe9df;
+    background: var(--surface-hover);
   }
 
   .card-top {
@@ -397,7 +361,7 @@ const formatDate = (date: Date) =>
     justify-content: space-between;
     gap: 12px;
     font-size: 10px;
-    color: #8d533d;
+    color: var(--accent);
     margin-bottom: 12px;
   }
 
@@ -409,9 +373,9 @@ const formatDate = (date: Date) =>
 
   .post-card > p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0 0 12px;
   }
 
@@ -421,7 +385,7 @@ const formatDate = (date: Date) =>
 
   .empty-message {
     font-size: 15px;
-    color: #625f58;
+    color: var(--text-secondary);
     margin: 0;
   }
 
@@ -430,7 +394,7 @@ const formatDate = (date: Date) =>
   .journal-ending {
     text-align: center;
     padding: 28px 20px 24px;
-    border-top: 1px solid #d8d2c7;
+    border-top: 1px solid var(--border-color);
   }
 
   .journal-ending h2 {
@@ -443,7 +407,7 @@ const formatDate = (date: Date) =>
     margin: 0 auto;
     font-size: 15px;
     line-height: 1.55;
-    color: #625f58;
+    color: var(--text-secondary);
   }
 
   /* TABLET AND MOBILE */
@@ -497,5 +461,24 @@ const formatDate = (date: Date) =>
     .journal-ending {
       padding: 24px 0;
     }
+  }
+
+  .journal-page {
+    padding-top: clamp(2rem, 6vw, 4rem);
+  }
+
+  .journal-intro h1 {
+    font-size: clamp(2.3rem, 5vw, 3.45rem);
+  }
+
+  .featured-art {
+    background:
+      repeating-radial-gradient(ellipse at 120% -40%, transparent 0 20px, rgb(219 181 140 / 16%) 21px 22px, transparent 23px 34px),
+      var(--indigo);
+    color: var(--on-indigo);
+  }
+
+  .featured-card {
+    border-radius: 2px 2px 1.5rem 2px;
   }
 </style>

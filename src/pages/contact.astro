@@ -28,8 +28,6 @@ import { SITE_TITLE } from '../consts';
       <!-- INTRODUCTION -->
 
       <section class="contact-intro">
-        <p class="eyebrow">LET'S CONNECT</p>
-
         <h1>
           Good things begin<br />
           with a conversation<span>.</span>
@@ -46,11 +44,6 @@ import { SITE_TITLE } from '../consts';
       <!-- CONTACT CARDS -->
 
       <section class="contact-section">
-
-        <div class="section-label">
-          <span>01 / GET IN TOUCH</span>
-          <div class="line"></div>
-        </div>
 
         <div class="contact-grid">
 
@@ -114,8 +107,6 @@ import { SITE_TITLE } from '../consts';
 
       <section class="contact-ending">
 
-        <p class="eyebrow">UNTIL THEN</p>
-
         <h2>
           Here's to ideas<br />
           worth exploring.
@@ -145,7 +136,7 @@ import { SITE_TITLE } from '../consts';
     width: min(90%, 1050px);
     margin: 0 auto;
     padding: 26px 0 40px;
-    color: #252521;
+    color: var(--text-primary);
   }
 
   .contact-page * {
@@ -153,15 +144,6 @@ import { SITE_TITLE } from '../consts';
   }
 
   /* EDITORIAL LABELS */
-
-  .contact-page .eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    color: #8d533d;
-    margin: 0;
-  }
 
   /* INTRODUCTION */
 
@@ -180,40 +162,18 @@ import { SITE_TITLE } from '../consts';
   }
 
   .contact-intro h1 span {
-    color: #8d533d;
+    color: var(--accent);
   }
 
   .intro-text {
     max-width: 560px;
     font-size: 16px;
-    line-height: 1.55;
-    color: #625f58;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0;
   }
 
   /* SECTION LABEL */
-
-  .section-label {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-
-  .section-label span {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #8d533d;
-    white-space: nowrap;
-  }
-
-  .line {
-    flex: 1;
-    height: 1px;
-    background: #d8d2c7;
-  }
 
   /* CONTACT CARDS */
 
@@ -231,9 +191,9 @@ import { SITE_TITLE } from '../consts';
     min-width: 0;
     min-height: 185px;
     padding: 20px;
-    border: 1px solid #d8d2c7;
+    border: 1px solid var(--border-color);
     text-decoration: none;
-    color: #252521;
+    color: var(--text-primary);
 
     display: flex;
     flex-direction: column;
@@ -247,13 +207,13 @@ import { SITE_TITLE } from '../consts';
   }
 
   .contact-card:hover {
-    background: #eee7dd;
-    border-color: #8d533d;
+    background: var(--surface-hover);
+    border-color: var(--accent);
     transform: translateY(-2px);
   }
 
   .contact-card:focus-visible {
-    outline: 2px solid #8d533d;
+    outline: 2px solid var(--accent);
     outline-offset: 4px;
   }
 
@@ -267,7 +227,7 @@ import { SITE_TITLE } from '../consts';
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1.2px;
-    color: #8d533d;
+    color: var(--accent);
   }
 
   .arrow {
@@ -285,9 +245,9 @@ import { SITE_TITLE } from '../consts';
 
   .card-content p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0 0 12px;
   }
 
@@ -296,7 +256,7 @@ import { SITE_TITLE } from '../consts';
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
     font-weight: 600;
-    color: #8d533d;
+    color: var(--accent);
     overflow-wrap: anywhere;
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -307,7 +267,7 @@ import { SITE_TITLE } from '../consts';
   .contact-ending {
     text-align: center;
     padding: 28px 20px 24px;
-    border-top: 1px solid #d8d2c7;
+    border-top: 1px solid var(--border-color);
   }
 
   .contact-ending h2 {
@@ -318,12 +278,12 @@ import { SITE_TITLE } from '../consts';
     margin: 12px 0;
   }
 
-  .contact-ending > p:not(.eyebrow) {
+  .contact-ending > p {
     max-width: 500px;
     margin: 0 auto 15px;
-    font-size: 15px;
-    line-height: 1.55;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
   }
 
   .home-link {
@@ -334,15 +294,15 @@ import { SITE_TITLE } from '../consts';
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
     font-weight: 600;
-    color: #8d533d;
+    color: var(--accent);
     text-decoration: none;
 
     padding-bottom: 3px;
-    border-bottom: 1px solid #8d533d;
+    border-bottom: 1px solid var(--accent);
   }
 
   .home-link:hover {
-    color: #693c2b;
+    color: var(--accent-dark);
   }
 
   /* TABLET AND MOBILE */
@@ -387,5 +347,25 @@ import { SITE_TITLE } from '../consts';
     .contact-card:hover {
       transform: none;
     }
+  }
+
+  .contact-page h1 {
+    font-size: clamp(2.3rem, 5vw, 3.45rem);
+    letter-spacing: -0.035em;
+  }
+
+  .contact-intro {
+    padding-top: clamp(1rem, 3vw, 2.5rem);
+    padding-bottom: clamp(1.75rem, 4vw, 3rem);
+  }
+
+  .contact-card {
+    background: var(--surface);
+    border-top: 2px solid var(--accent);
+    border-radius: 2px 2px 1.25rem 2px;
+  }
+
+  .contact-card:hover {
+    background: var(--surface-hover);
   }
 </style>

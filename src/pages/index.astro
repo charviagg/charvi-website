@@ -25,10 +25,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
       <section class="hero">
         <div class="hero-content">
-          <p class="eyebrow">
-            ENTREPRENEURSHIP / SOCIAL IMPACT / IDEAS
-          </p>
-
           <h1>
             Curiosity, ideas
             <em>&amp; the passion</em>
@@ -58,11 +54,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
               experiments &amp; discoveries.
             </span>
           </div>
-
-          <div class="art-bottom">
-            <span>CHARVI AGGARWAL</span>
-            <span>EST. 2026</span>
-          </div>
         </div>
       </section>
 
@@ -70,7 +61,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
       <section class="about section-grid">
         <div>
-          <p class="eyebrow">01 / THE PERSON</p>
           <h2>A work in progress, always.</h2>
         </div>
 
@@ -93,7 +83,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
       <section class="work" id="work">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">02 / SELECTED EXPLORATIONS</p>
             <h2>Things I'm working on.</h2>
           </div>
 
@@ -147,7 +136,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
       <section class="closing section-grid">
         <div>
-          <p class="eyebrow">03 / WHAT'S NEXT</p>
           <h2>Still learning.<br />Still building.</h2>
         </div>
 
@@ -183,21 +171,12 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
     box-sizing: border-box;
   }
 
-  .homepage .eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    color: #8d533d;
-    margin: 0 0 10px;
-  }
-
   .homepage h1,
   .homepage h2,
   .homepage h3 {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 400;
-    color: #252521;
+    color: var(--text-primary);
     line-height: 1.15;
   }
 
@@ -230,30 +209,30 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 1.55;
-    color: #625f58;
+    color: var(--text-secondary);
     max-width: 440px;
     margin: 0 0 14px;
   }
 
   .text-link {
     display: inline-block;
-    color: #8d533d;
+    color: var(--accent);
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 1px solid #8d533d;
+    border-bottom: 1px solid var(--accent);
     padding-bottom: 3px;
   }
 
   .text-link:hover {
-    color: #252521;
-    border-color: #252521;
+    color: var(--text-primary);
+    border-color: var(--text-primary);
   }
 
   /* SMALLER ART PANEL */
 
   .hero-art {
-    background: #ded5c7;
+    background: var(--surface);
     height: 240px;
     min-height: 0;
     padding: 18px;
@@ -262,11 +241,10 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
     flex-direction: column;
     justify-content: space-between;
 
-    color: #433d36;
+    color: var(--text-primary);
   }
 
-  .art-top,
-  .art-bottom {
+  .art-top {
     font-size: 9px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -274,7 +252,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
   .art-center {
     display: flex;
+    flex: 1;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
   }
@@ -295,7 +275,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
   .art-line {
     width: 35px;
     height: 1px;
-    background: #8d533d;
+    background: var(--accent);
     margin: 12px 0;
   }
 
@@ -304,12 +284,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
     font-size: 13px;
     line-height: 1.4;
     max-width: 210px;
-  }
-
-  .art-bottom {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
   }
 
   /* COMPACT SECTIONS */
@@ -324,7 +298,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
   .about,
   .work,
   .closing {
-    border-top: 1px solid #d8d2c7;
+    border-top: 1px solid var(--border-color);
     padding: 24px 0 26px;
   }
 
@@ -339,9 +313,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
   .homepage .section-copy p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    line-height: 1.55;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0 0 12px;
   }
 
@@ -357,7 +331,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
   .section-note {
     font-size: 11px;
-    color: #817b72;
+    color: var(--text-secondary);
     max-width: 180px;
     text-align: right;
   }
@@ -369,7 +343,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
   }
 
   .project {
-    background: #ebe6dc;
+    background: var(--surface);
     padding: 18px;
     min-height: 155px;
 
@@ -385,7 +359,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.8px;
-    color: #8d533d;
+    color: var(--accent);
   }
 
   .homepage h3 {
@@ -395,14 +369,14 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
   .homepage .project p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #625f58;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
     margin: 0;
   }
 
   .project-category {
-    color: #8d533d;
+    color: var(--accent);
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.8px;
@@ -476,5 +450,75 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
     .homepage h2 {
       font-size: 26px;
     }
+  }
+
+  .hero {
+    padding-block: clamp(2.5rem, 7vw, 5.75rem);
+  }
+
+  .homepage h1 {
+    font-size: clamp(2.5rem, 5.2vw, 4.35rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.25rem;
+  }
+
+  .homepage h1 em {
+    color: var(--accent);
+  }
+
+  .hero-art {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    height: auto;
+    min-height: clamp(17rem, 32vw, 23rem);
+    padding: clamp(1.25rem, 3vw, 2rem);
+    background: var(--indigo);
+    color: var(--on-indigo);
+    border-radius: 2px 2px 2px 3rem;
+  }
+
+  .hero-art::before,
+  .hero-art::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    width: 65%;
+    aspect-ratio: 1;
+    border: 1px solid rgb(219 181 140 / 32%);
+    border-radius: 50%;
+  }
+
+  .hero-art::before {
+    top: -45%;
+    right: -11%;
+    box-shadow: 0 0 0 16px rgb(219 181 140 / 9%), 0 0 0 32px rgb(219 181 140 / 7%);
+  }
+
+  .hero-art::after {
+    bottom: -52%;
+    left: -10%;
+    box-shadow: 0 0 0 18px rgb(219 181 140 / 9%);
+  }
+
+  .art-large {
+    font-size: clamp(2.35rem, 4.5vw, 3.6rem);
+  }
+
+  .art-top,
+  .art-small {
+    font-size: 0.6875rem;
+  }
+
+  .art-line {
+    background: var(--bronze-light);
+  }
+
+  .about,
+  .work,
+  .closing {
+    padding-block: clamp(1.75rem, 4.5vw, 3.25rem);
   }
 </style>

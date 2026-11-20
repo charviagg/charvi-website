@@ -52,6 +52,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			.prose :global(figure) {
+				margin: 1.75rem 0;
+			}
+			.prose :global(figure img) {
+				display: block;
+			}
+			.prose :global(figcaption) {
+				color: var(--text-secondary);
+				font-size: 0.875rem;
+				margin-top: 0.5rem;
+			}
 		</style>
 	</head>
 
