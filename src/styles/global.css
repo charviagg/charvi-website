@@ -321,3 +321,38 @@ footer {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+/* Draw link arrows without relying on the device's emoji font. */
+.link-arrow {
+  display: inline-block;
+  position: relative;
+  width: 0.8em;
+  height: 0.75em;
+  margin-inline-start: 0.25em;
+  vertical-align: -0.03em;
+  flex: none;
+}
+
+.link-arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  inset-inline: 0 1px;
+  border-top: 1px solid currentColor;
+}
+
+.link-arrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  width: 0.36em;
+  height: 0.36em;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: translateY(calc(-50% + 0.5px)) rotate(45deg);
+}
+
+.link-arrow--diagonal {
+  transform: rotate(-45deg);
+}

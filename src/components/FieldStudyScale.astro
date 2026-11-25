@@ -1,0 +1,115 @@
+<figure class="field-study-figure scale-figure">
+  <h2>The scale of the problem</h2>
+  <div class="scale-grid">
+    <div class="scale-stat">
+      <strong>20 million</strong>
+      <span>tonnes</span>
+      <p>Annual paddy straw generated in Punjab</p>
+    </div>
+    <div class="scale-stat">
+      <strong>7.3 million</strong>
+      <span>tonnes</span>
+      <p>Historical estimate of paddy straw burned</p>
+    </div>
+    <div class="scale-stat">
+      <strong>20–25</strong>
+      <span>days</span>
+      <p>Typical window between paddy harvest and wheat sowing</p>
+    </div>
+    <div class="scale-stat">
+      <strong>Up to 37%</strong>
+      <span>of daily PM2.5</span>
+      <p>Peak-day contribution estimated from biomass burning in Delhi</p>
+    </div>
+  </div>
+  <figcaption>
+    <b>Figure 1.</b> Scale of paddy-residue generation and peak-season air quality exposure.
+    Sources: Government of India, 2023–24 Crop Residue Management Guidelines; CEEW, 2020–2024 survey and supply-chain research; GMD, 2024.
+  </figcaption>
+</figure>
+
+<style>
+  .field-study-figure {
+    width: 100%;
+    margin: 2.25rem 0;
+    padding: 1.35rem 0 0;
+  }
+
+  .figure-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.35rem;
+    color: var(--accent);
+    font: 700 0.68rem/1 'DM Sans', sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .figure-heading::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+  }
+
+  .scale-figure h2,
+  .fire-figure h2,
+  .supply-figure h2 {
+    margin: 0 0 1rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+  }
+
+  .scale-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+  }
+
+  .scale-stat {
+    min-height: 170px;
+    padding: 1.25rem;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .scale-stat strong {
+    display: block;
+    color: var(--accent-dark);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .scale-stat span {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .scale-stat p {
+    max-width: 250px;
+    margin: 0.8rem 0 0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .field-study-figure figcaption {
+    margin-top: 0.65rem;
+    color: var(--text-secondary);
+    font-size: 0.76rem;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 520px) {
+    .scale-grid { grid-template-columns: 1fr; }
+    .scale-stat { min-height: 145px; }
+  }
+</style>

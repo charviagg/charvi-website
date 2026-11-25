@@ -1,0 +1,140 @@
+<figure class="field-study-figure supply-figure">
+  <h2>The economics of paddy straw</h2>
+  <div class="supply-chain">
+    <div class="chain-step">
+      <span class="step-number">01</span>
+      <strong>Smallholder<br />farmers</strong>
+      <p>Fragmented landholdings; a short, fixed clearing window.</p>
+    </div>
+    <span class="chain-arrow" aria-hidden="true">→</span>
+    <div class="chain-step">
+      <span class="step-number">02</span>
+      <strong>Local<br />aggregators</strong>
+      <p>Shared machinery access and coordination costs.</p>
+    </div>
+    <span class="chain-arrow" aria-hidden="true">→</span>
+    <div class="chain-step">
+      <span class="step-number">03</span>
+      <strong>Baling and<br />transportation</strong>
+      <p>Bulky material; costs rise quickly beyond 50 km.</p>
+    </div>
+    <span class="chain-arrow" aria-hidden="true">→</span>
+    <div class="chain-step">
+      <span class="step-number">04</span>
+      <strong>Storage<br />facilities</strong>
+      <p>Seasonal supply requires land and fire-safe storage.</p>
+    </div>
+    <span class="chain-arrow" aria-hidden="true">→</span>
+    <div class="chain-step">
+      <span class="step-number">05</span>
+      <strong>Compressed<br />biogas plants</strong>
+      <p>Capital-intensive processing; reliable feedstock required.</p>
+    </div>
+  </div>
+  <div class="constraint-band">
+    <span>Key constraints</span>
+    <p>Fragmented supply · Machinery costs · Transportation costs · Seasonal availability · Storage requirements · Capital-intensive processing</p>
+  </div>
+  <figcaption>
+    <b>Figure 3.</b> A simplified paddy-straw supply chain. CEEW estimates put a 50 km delivered baled-straw cost at roughly ₹2,500–₹3,000 per tonne and describe distances beyond 50 km as commercially challenging.
+    Source: Council on Energy, Environment and Water, <i>Is Ex-situ Crop Residue Management a Scalable Solution to Stubble Burning?</i>, 2021.
+  </figcaption>
+</figure>
+
+<style>
+  .field-study-figure {
+    width: 100%;
+    margin: 2.25rem 0;
+    padding: 1.35rem 0 0;
+  }
+
+  .supply-chain {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .chain-step {
+    min-height: 180px;
+    padding: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .chain-step:first-child { border-left: 1px solid var(--border-color); }
+  .chain-step:last-child { border-right: 1px solid var(--border-color); }
+
+  .step-number {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+    font: 700 0.64rem/1 'DM Sans', sans-serif;
+  }
+
+  .chain-step strong {
+    display: block;
+    min-height: 42px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  .chain-step p {
+    margin: 0.65rem 0 0;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .chain-arrow {
+    align-self: center;
+    color: var(--accent);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .constraint-band {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    padding: 0.8rem 0;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .constraint-band span {
+    color: var(--accent);
+    font: 700 0.68rem/1.4 'DM Sans', sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .constraint-band p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.76rem;
+  }
+
+  @media (max-width: 620px) {
+    .supply-chain {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .chain-step,
+    .chain-step:first-child,
+    .chain-step:last-child {
+      min-height: 0;
+      border-left: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      border-bottom: 0;
+    }
+
+    .chain-step:last-child { border-bottom: 1px solid var(--border-color); }
+
+    .chain-step strong { min-height: 0; }
+    .chain-arrow { height: 24px; line-height: 24px; transform: rotate(90deg); }
+    .constraint-band { grid-template-columns: 1fr; gap: 0.4rem; }
+  }
+</style>

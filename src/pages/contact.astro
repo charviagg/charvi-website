@@ -55,7 +55,7 @@ import { SITE_TITLE } from '../consts';
           >
             <div class="card-top">
               <span>EMAIL</span>
-              <span class="arrow">↗</span>
+              <span class="link-arrow link-arrow--diagonal" aria-hidden="true"></span>
             </div>
 
             <div class="card-content">
@@ -82,7 +82,7 @@ import { SITE_TITLE } from '../consts';
           >
             <div class="card-top">
               <span>LINKEDIN</span>
-              <span class="arrow">↗</span>
+              <span class="link-arrow link-arrow--diagonal" aria-hidden="true"></span>
             </div>
 
             <div class="card-content">
@@ -118,7 +118,7 @@ import { SITE_TITLE } from '../consts';
         </p>
 
         <a href="/" class="home-link">
-          Back to home <span>↗</span>
+          Back to home <span class="link-arrow" aria-hidden="true"></span>
         </a>
 
       </section>
@@ -228,11 +228,6 @@ import { SITE_TITLE } from '../consts';
     font-weight: 700;
     letter-spacing: 1.2px;
     color: var(--accent);
-  }
-
-  .arrow {
-    font-size: 18px;
-    font-weight: 400;
   }
 
   .card-content h2 {
