@@ -40,6 +40,11 @@ And what better place to begin than Singtel, a homegrown company whose history i
 
 My year in Corporate Transformation at Singtel gave me perhaps my most intimate understanding of Singapore yet. Working within an organisation so deeply woven into the country's fabric offered a perspective that my years as a student could not quite have afforded me. I began to appreciate the work, deliberation, and people behind some of the systems I had grown accustomed to as a resident.
 
+<figure>
+  <img src="/singtel-volunteer-roadshow.webp" width="1620" height="1080" loading="lazy" decoding="async" alt="Singtel volunteers in red shirts posing together in front of a digital skills roadshow banner." />
+  <figcaption>Volunteering at a Singtel-organised roadshow where we helped older adults recognise scams through a quick learning session.</figcaption>
+</figure>
+
 There is something rather special about getting to know a country at different stages of one's own life. I had experienced Singapore as a schoolgirl, a university student, and eventually, a working professional. Each version of me inhabited the same little island, yet discovered a slightly different one.
 
 I sometimes wonder when exactly Singapore began to feel like home. There was no particular epiphany, no grand moment of arrival. Perhaps it happened gradually, through familiar faces in lecture theatres, conversations that outlasted their allotted office hours, friendships, dance rehearsals, and one too many cups of coffee.
